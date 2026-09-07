@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyStake Login: accesso, recupero password e problemi</title>
+<meta name="description" content="Scopri come accedere a MyStake, recuperare la password, risolvere errori di login e proteggere il tuo account in sicurezza.">
+<link rel="canonical" href="https://mystake-casino-it.com/accesso/">
+<link rel="alternate" hreflang="it-it" href="https://mystake-casino-it.com/accesso/">
+<link rel="alternate" hreflang="x-default" href="https://mystake-casino-it.com/">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<style>
+:root{
+  --bg:#14161d; --panel:#1b1e27; --card:#232734; --line:rgba(255,255,255,.08);
+  --blue:#00AAEB; --blue-d:#0090c8; --red:#ED2B4E; --red-d:#c91f3e;
+  --txt:#fff; --mut:rgba(255,255,255,.55); --mut2:rgba(255,255,255,.75);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+
+/* ---------- header (объединённый) ---------- */
+.hd{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.hd .container{display:flex;align-items:center;gap:18px;min-height:64px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.logo img{height:36px;width:auto}
+.hnav{display:flex;align-items:center;gap:4px;flex:1;min-width:0;padding:9px 16px 0 0;overflow-x:auto;scrollbar-width:none}
+.hnav::-webkit-scrollbar{display:none}
+.hnav a{position:relative;padding:8px 10px;border-radius:8px;font-weight:600;font-size:13.5px;color:var(--mut2);white-space:nowrap}
+.hnav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.hnav .tag{position:absolute;top:-7px;right:2px;background:var(--red);color:#fff;font-size:9px;font-weight:700;line-height:1;padding:3px 5px;border-radius:4px;text-transform:uppercase}
+.auth{display:flex;align-items:center;gap:8px;margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 18px;border-radius:8px;font-weight:700;font-size:13.5px;cursor:pointer;border:0;transition:background .15s}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-d)}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-d)}
+.lang{display:flex;align-items:center;gap:6px;font-weight:700;font-size:13px;color:var(--mut2)}
+.lang svg{border-radius:2px}
+
+/* ---------- slider ---------- */
+.hero{margin-top:16px}
+.slider{position:relative;overflow:hidden;border-radius:14px;background:var(--card)}
+.slides{display:flex;transition:transform .45s ease}
+.slide{flex:0 0 100%}
+.slide img{width:100%;height:auto;aspect-ratio:1920/445;object-fit:cover}
+@media(max-width:920px){.slide img{aspect-ratio:702/306}}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:10px}
+.dots span{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22);cursor:pointer;transition:background .2s}
+.dots span.on{background:var(--blue)}
+.snav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(20,22,29,.65);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2}
+.snav:hover{background:rgba(20,22,29,.9)}
+.snav.prev{left:12px}.snav.next{right:12px}
+
+/* ---------- категории ---------- */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.cat{position:relative;border-radius:14px;overflow:hidden;border:1px solid;transition:transform .15s}
+.cat:hover{transform:translateY(-3px)}
+.cat img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/7}
+.cat .text{position:absolute;left:16px;bottom:12px;font-weight:800;font-size:19px;text-transform:uppercase;letter-spacing:.5px;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.cat.g{border-color:#22c55e;box-shadow:0 0 18px rgba(34,197,94,.25)}
+.cat.r{border-color:#ef4444;box-shadow:0 0 18px rgba(239,68,68,.25)}
+.cat.p{border-color:#8b5cf6;box-shadow:0 0 18px rgba(139,92,246,.25)}
+.cat.o{border-color:#f59e0b;box-shadow:0 0 18px rgba(245,158,11,.25)}
+
+/* ---------- h1 + лид ---------- */
+.intro{margin:28px 0 6px}
+.intro h1{font-size:26px;line-height:1.25;margin-bottom:8px}
+.intro p{color:var(--mut2);max-width:860px}
+
+/* ---------- секции-свайперы ---------- */
+.row{margin-top:30px}
+.row-hd{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.row-hd svg{flex:none}
+.row-hd .title{font-size:19px;font-weight:800}
+.row-hd .acts{margin-left:auto;display:flex;align-items:center;gap:12px}
+.row-hd .all{color:var(--blue);font-weight:700;font-size:13.5px}
+.row-hd .all:hover{text-decoration:underline}
+.arrows{display:flex;gap:6px}
+.arr{width:30px;height:30px;border-radius:8px;background:var(--card);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.arr:hover{background:#2c3140}
+.pills{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:12px}
+.pills::-webkit-scrollbar{display:none}
+.pills a{flex:none;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:7px 15px;font-size:13px;font-weight:600;color:var(--mut2)}
+.pills a:hover{color:#fff;border-color:var(--blue)}
+.strip{display:flex;gap:11px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px}
+.strip::-webkit-scrollbar{display:none}
+.strip a{flex:none;border-radius:10px;overflow:hidden;transition:transform .15s}
+.strip a:hover{transform:translateY(-3px)}
+.strip img{width:100%;height:auto}
+.w-slot img{aspect-ratio:210/264;object-fit:cover}
+.w-live img{aspect-ratio:254/320;object-fit:cover}
+.w-slot a{width:131px}
+.w-live a{width:152px}
+.w-show a{width:320px}
+.w-sport a{width:189px}
+
+/* ---------- Serie A ---------- */
+.matches{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.matches::-webkit-scrollbar{display:none}
+.match{flex:0 0 315px;background:var(--card);border-radius:12px;padding:14px}
+.match .top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--mut);margin-bottom:14px}
+.match .region{background:rgba(0,170,235,.12);color:var(--blue);font-weight:700;padding:3px 8px;border-radius:6px}
+.match .mid{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.match .team{display:flex;flex-direction:column;align-items:center;gap:6px;width:38%;font-weight:700;font-size:13px;text-align:center}
+.match .vs{color:var(--mut);font-weight:800;font-size:12px;letter-spacing:1px}
+.match .pos{display:flex;gap:8px}
+.match .pos a{flex:1;background:#1a1d27;border:1px solid var(--line);border-radius:8px;padding:7px 0;display:flex;flex-direction:column;align-items:center;gap:2px}
+.match .pos a:hover{border-color:var(--blue)}
+.match .pos .n{font-size:11px;color:var(--mut)}
+.match .pos .c{font-weight:800;color:var(--blue)}
+.badge{width:37px;height:37px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+.note{font-size:12px;color:var(--mut);margin-top:8px}
+
+/* ---------- SEO ---------- */
+.seo{margin-top:36px}
+.seo h2{font-size:20px;margin:26px 0 10px}
+.seo h2:first-child{margin-top:0}
+.seo p{color:var(--mut2);margin-bottom:12px}
+.seo a{color:var(--blue)}
+.seo a:hover{text-decoration:underline}
+.seo ul,.seo ol{padding-left:24px;margin:0 0 12px}
+.seo li{color:var(--mut2);margin:4px 0}
+.seo a.btn{color:#fff}
+.seo a.btn:hover{text-decoration:none}
+.seo table{width:100%;border-collapse:collapse;margin:14px 0}
+.seo td{padding:9px 12px;border-bottom:1px solid var(--line);color:var(--mut2);font-size:14px}
+.seo td:first-child{color:#fff;font-weight:600;width:36%}
+.pros{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+.pros div{background:var(--card);border-radius:10px;padding:16px}
+.pros h3{font-size:14px;margin-bottom:8px}
+.pros ul{list-style:none}
+.pros li{color:var(--mut2);font-size:14px;padding:4px 0 4px 22px;position:relative}
+.pros .si li::before{content:"✓";position:absolute;left:0;color:#22c55e;font-weight:700}
+.pros .no li::before{content:"✕";position:absolute;left:0;color:#ef4444;font-weight:700}
+.seo details{background:var(--card);border-radius:10px;margin-bottom:8px;padding:0}
+.seo summary{cursor:pointer;font-weight:600;padding:13px 16px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.seo summary::after{content:"+";color:var(--blue);font-size:18px;font-weight:400}
+.seo details[open] summary::after{content:"–"}
+.seo details p{padding:0 16px 13px}
+.cta-box{background:linear-gradient(120deg,#1b2a3d,#16202e);border:1px solid rgba(0,170,235,.35);border-radius:12px;padding:20px;margin:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.cta-box .t{font-weight:800;font-size:17px}
+.cta-box .s{color:var(--mut2);font-size:13.5px}
+
+/* ---------- footer ---------- */
+.ft{background:var(--panel);border-top:1px solid var(--line);margin-top:44px;padding:36px 0 26px}
+.ft-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:26px}
+.ft-cols h4{font-size:13px;text-transform:uppercase;letter-spacing:.8px;color:var(--mut);margin-bottom:12px}
+.ft-cols a{display:block;color:var(--mut2);font-size:14px;padding:4px 0}
+.ft-cols a:hover{color:#fff}
+.pays{display:flex;gap:8px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--line)}
+.pays span{background:var(--card);border-radius:6px;padding:6px 13px;font-size:12px;font-weight:700;color:var(--mut2)}
+.comp{display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line);padding-top:18px}
+.age{flex:none;width:40px;height:40px;border-radius:50%;border:2px solid var(--red);color:var(--red);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+.comp p{color:var(--mut);font-size:12.5px;line-height:1.6}
+
+/* ---------- adaptive ---------- */
+@media(max-width:1100px){
+  .hnav{order:3;flex-basis:100%;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+  .hnav::-webkit-scrollbar{display:none}
+}
+@media(max-width:920px){
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .ft-cols{grid-template-columns:repeat(2,1fr)}
+  .intro h1{font-size:22px}
+}
+@media(max-width:560px){
+  .logo img{height:30px}
+  .btn{padding:0 13px;font-size:12.5px}
+  .cats{gap:10px}
+  .cat .text{font-size:15px;left:10px;bottom:8px}
+  .pros{grid-template-columns:1fr}
+  .ft-cols{grid-template-columns:1fr 1fr;gap:16px}
+  .w-slot a{width:112px}.w-live a{width:130px}.w-show a{width:260px}.w-sport a{width:160px}
+  .match{flex-basis:280px}
+}
+</style>
+<style>
+.subTop{background:linear-gradient(120deg,#1b2a3d,#16202e);border-bottom:1px solid var(--line)}
+.subTop .container{padding-top:16px;padding-bottom:20px}
+.crumbs{font-size:12px;color:var(--mut);margin-bottom:10px}.crumbs a{color:var(--blue)}.crumbs b{color:#fff}
+.subTop h1{font-size:28px;line-height:1.22;max-width:840px}
+.clusterNav{background:var(--panel);border-bottom:1px solid var(--line)}
+.clusterNav .container{display:flex;gap:4px 6px;flex-wrap:wrap;padding:10px 16px;overflow-x:auto;scrollbar-width:none}
+.clusterNav .container::-webkit-scrollbar{display:none}
+.clusterNav a{flex:none;padding:7px 12px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--mut2);white-space:nowrap}
+.clusterNav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.clusterNav a.on{color:#fff;background:var(--blue)}
+.seo .tbl{overflow-x:auto;margin:14px 0}
+.seo ul,.seo ol{padding-left:24px;margin:0 0 13px}
+.seo li{margin:4px 0;color:var(--mut2)}
+.seo h3{font-size:16px;margin:18px 0 8px}
+.clusterFoot{display:flex;gap:8px 16px;flex-wrap:wrap;padding:20px 0 4px;border-top:1px solid var(--line);margin-top:26px}
+.clusterFoot a{color:var(--blue);font-weight:600;font-size:13.5px}
+.gnav{margin:34px 0 8px}
+.gnav h2{font-size:20px;margin-bottom:14px}
+.gnav-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gnav-grid a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:5px;transition:transform .15s,border-color .15s}
+.gnav-grid a:hover{transform:translateY(-3px);border-color:var(--blue);text-decoration:none}
+.gnav-grid .t{font-weight:800;font-size:15px;color:#fff;display:flex;align-items:center;justify-content:space-between}
+.gnav-grid .t::after{content:"→";color:var(--blue);font-weight:400}
+.gnav-grid .d{font-size:12.5px;color:var(--mut);line-height:1.45}
+@media(max-width:920px){.gnav-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.gnav-grid{grid-template-columns:1fr}}
+.subMain{margin-top:26px}
+.subMain .seo{margin-top:0;max-width:880px}
+/* ---- тематические блоки внутриков ---- */
+.ximg{display:block;width:100%;max-width:620px;height:auto;border-radius:14px;margin:22px auto;border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.35)}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.btnrow a{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:9px 18px;font-size:13.5px;font-weight:700;color:#fff;transition:border-color .15s}
+.btnrow a:hover{border-color:var(--blue);text-decoration:none}
+.btnrow a .st{color:#ffc93c;font-size:12px}
+.btnrow a.hot{background:var(--blue);border-color:var(--blue)}
+.ctamini{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:linear-gradient(120deg,#1b2a3d,#16202e);border:1px solid rgba(0,170,235,.3);border-radius:12px;padding:14px 18px;margin:20px 0}
+.ctamini .tt{font-weight:700;font-size:14.5px}.ctamini .tt b{color:var(--blue)}
+.ctamini a{flex:none;background:var(--red);color:#fff;border-radius:8px;padding:9px 18px;font-weight:700;font-size:13.5px}
+.ctamini a:hover{background:var(--red-d);text-decoration:none}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.sgrid a{border-radius:10px;overflow:hidden;transition:transform .15s;position:relative}
+.sgrid a:hover{transform:translateY(-3px)}
+.sgrid img{width:100%;aspect-ratio:210/264;object-fit:cover;height:auto}
+.bcards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
+.bcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 18px;display:flex;flex-direction:column;gap:6px}
+.bcard .k{font-size:11.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);font-weight:800}
+.bcard .v{font-size:26px;font-weight:800;color:#fff;line-height:1.1}
+.bcard .v small{font-size:14px;color:var(--blue);font-weight:700;display:block;margin-top:3px}
+.bcard .d{font-size:12.5px;color:var(--mut2);flex:1}
+.bcard a{align-self:flex-start;background:var(--blue);color:#fff;border-radius:8px;padding:9px 16px;font-weight:700;font-size:13px;margin-top:8px}
+.bcard a:hover{background:var(--blue-d);text-decoration:none}
+.ratebox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin:18px 0}
+.ratebox .big{font-size:44px;font-weight:800;color:#fff;line-height:1}
+.ratebox .big small{font-size:16px;color:var(--mut)}
+.ratebox .bars{flex:1;min-width:240px;display:flex;flex-direction:column;gap:8px}
+.rbar{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--mut2)}
+.rbar .lbl{width:110px;flex:none}.rbar .tr{flex:1;height:7px;border-radius:4px;background:rgba(255,255,255,.09);overflow:hidden}
+.rbar .fl{height:100%;border-radius:4px;background:var(--blue)}
+.rbar .num{width:26px;text-align:right;font-weight:700;color:#fff}
+.rvws{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.rvw{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px}
+.rvw-h{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
+.rvw-n{font-weight:700;font-size:13.5px}.rvw-s{color:#ffc93c;font-size:12.5px;letter-spacing:1.5px;white-space:nowrap}
+.rvw-m{font-size:11.5px;color:var(--mut);margin-bottom:7px}
+.rvw-t{font-size:13.5px;color:var(--mut2);line-height:1.55;margin:0}
+.kvbox{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.kv{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.kv .n{font-size:20px;font-weight:800;color:var(--blue)}
+.kv .l{font-size:11.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.loginbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;max-width:420px;margin:18px 0}
+.loginbox .fld{margin-bottom:12px}
+.loginbox label{display:block;font-size:12px;color:var(--mut);margin-bottom:5px;font-weight:700}
+.loginbox input{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:11px 12px;color:#fff;font-size:14px;pointer-events:none}
+.loginbox .sub{display:block;text-align:center;background:var(--blue);color:#fff;border-radius:8px;padding:12px;font-weight:700;font-size:14.5px;margin-top:14px}
+.loginbox .sub:hover{background:var(--blue-d);text-decoration:none}
+.loginbox .alt{text-align:center;font-size:12.5px;color:var(--mut);margin-top:10px}
+.loginbox .alt a{color:var(--blue)}
+.appbtns{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.appbtns a{display:inline-flex;align-items:center;gap:11px;background:#000;border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:10px 18px;min-width:200px}
+.appbtns a:hover{border-color:var(--blue);text-decoration:none}
+.appbtns .txt small{display:block;font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
+.appbtns .txt b{font-size:15.5px;color:#fff}
+.stores{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.store{flex:1;min-width:200px;background:var(--card);border:1px dashed rgba(255,255,255,.2);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:10px;color:var(--mut);font-size:13px}
+.store .x{color:#ef4444;font-weight:800}
+@media(max-width:880px){.sgrid{grid-template-columns:repeat(3,1fr)}.bcards{grid-template-columns:1fr}.kvbox{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.rvws{grid-template-columns:1fr}.sgrid{grid-template-columns:repeat(2,1fr)}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mystake-casino-it.com/"}, {"@type": "ListItem", "position": 2, "name": "Come effettuare il login su MyStake", "item": "https://mystake-casino-it.com/accesso/"}]}</script>
+</head>
+<body>
+<header class="hd">
+  <div class="container">
+    <a class="logo" href="/"><img src="/assets/logo.svg" alt="Mystake" width="107" height="36"></a>
+    <nav class="hnav">
+      <a href="/referral-link">Sports</a>
+      <a href="/referral-link">Slot</a>
+      <a href="/referral-link">Casinò Live</a>
+      <a href="/referral-link">MiniGiochi<span class="tag">Caldo</span></a>
+      <a href="/referral-link">Promozioni<span class="tag">Caldo</span></a>
+    </nav>
+    <div class="auth">
+      <a class="btn btn-red" href="/referral-link">Registro</a>
+      <a class="btn btn-blue" href="/referral-link">Accedi</a>
+    </div>
+    <span class="lang"><svg width="20" height="14" viewBox="0 0 3 2"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg>IT</span>
+  </div>
+</header>
+<section class="subTop"><div class="container">
+  <div class="crumbs"><a href="/">Home</a> / <b>Accesso</b></div>
+  <h1>Come effettuare il login su MyStake</h1>
+</div></section>
+<div class="clusterNav"><div class="container"><a href="/">Home</a><a href="/bonus/">Bonus</a><a href="/casino/">Casinò</a><a href="/scommesse/">Scommesse</a><a href="/chicken-pollo/">Gioco del pollo</a><a href="/dino/">Dino</a><a href="/accesso/" class="on">Accesso</a><a href="/app/">App</a><a href="/recensioni/">Recensioni</a></div></div>
+<main class="container subMain">
+  <article class="seo">
+<p>Chi cerca &quot;mystake login&quot; vuole quasi sempre una cosa: entrare nell&#x27;account al volo e tornare a giocare. Da browser o da app cambia poco — un minuto scarso e sei dentro. E se qualcosa si incastra? Per ogni scenario c&#x27;è una via d&#x27;uscita, dalla password che ti sei dimenticato all&#x27;account che si è bloccato.</p>
+<p>In questa guida trovi:</p>
+<ul><li>come si accede, passo per passo;</li><li>come recuperi le credenziali quando le perdi;</li><li>gli errori che capitano più spesso e come toglierli di mezzo;</li><li>qualche dritta per blindare il tuo profilo.</li></ul>
+<blockquote class="note"><p><b>Nota sullo status in Italia:</b> qui parliamo di un casinò cripto con licenza di Curaçao, quindi <b>fuori dal perimetro ADM</b>. Chi gioca da qui lo fa su una piattaforma offshore, con tutta la responsabilità personale che questo comporta.</p></blockquote>
+<p><b>Risposta rapida:</b> per il login su MyStake clicca su &quot;Accedi&quot; in alto a destra, metti l&#x27;email registrata e la password (attento a maiuscole e minuscole), poi premi &quot;Accedi&quot;.</p>
+
+<div class="loginbox"><div class="fld"><label>Email o nome utente</label><input type="text" placeholder="nome@email.it" tabindex="-1"></div><div class="fld"><label>Password</label><input type="password" placeholder="••••••••" tabindex="-1"></div><a class="sub" href="/referral-link">Accedi a Mystake »</a><div class="alt">Non hai un conto? <a href="/referral-link">Registrati in 2 minuti</a></div></div>
+<h2>Come accedere a MyStake passo dopo passo</h2>
+<p>Il pulsante di accesso sta sempre nell&#x27;angolo in alto a destra, accanto a quello di registrazione. Stessa posizione da desktop e da mobile. Niente da cercare nei menu, insomma.</p>
+<p>Ecco la procedura per intero:</p>
+<p>1. <b>Apri il sito ufficiale mystake.com</b> dal browser, oppure avvia l&#x27;app se giochi da smartphone. Il sito parla anche italiano, quindi scordati traduttori esterni.</p>
+<p>2. <b>Clicca su &quot;Accedi&quot; / &quot;Log In&quot;</b> in alto a destra. Si apre la finestra di autenticazione.</p>
+<p>3. <b>Metti l&#x27;indirizzo email</b> usato in fase di registrazione. Occhio ai refusi: una lettera sbagliata e il sistema fa finta di non conoscerti.</p>
+<p>4. <b>Digita la password.</b> Il campo distingue maiuscole e minuscole, quindi controlla che il Caps Lock non sia acceso.</p>
+<p>5. <b>Premi &quot;Accedi&quot;</b> e in un paio di secondi sei operativo: saldo, bonus attivi e cronologia delle scommesse davanti agli occhi.</p>
+<p>Da mobile la logica è la stessa: identica email, identica password, identico pulsante. Le credenziali funzionano su più dispositivi in contemporanea — accedi dal telefono e il PC non ti butta fuori. Una sola raccomandazione, e non è banale: controlla sempre che nella barra del browser ci sia scritto esattamente mystake.com. I siti clone che copiano le pagine di login sono il trucco classico per fregare le credenziali dei giocatori.</p>
+<p>Un dettaglio che manda in confusione parecchia gente: al momento non c&#x27;è un accesso via Google o Facebook. Si va di email + password, punto. Quindi tienile da conto.</p>
+<div class="cta-box"><div><div class="t">Bonus di benvenuto fino a 1.000 €</div><div class="s">170% sul primo deposito in crypto · 18+ · si applicano requisiti di puntata</div></div><a class="btn btn-blue" style="height:46px;padding:0 28px;font-size:15px" href="/referral-link">Vai a Mystake</a></div><h2>Recuperare la password di MyStake</h2>
+<p>Password dimenticata? Capita a chiunque, soprattutto se — come si dovrebbe — usi una chiave diversa per ogni sito. Il recupero fila liscio:</p>
+<p>1. Nella finestra di login, clicca sul link <b>&quot;Password dimenticata?&quot;</b> sotto i campi di accesso.</p>
+<p>2. Metti l&#x27;indirizzo email collegato all&#x27;account (in certi casi la verifica passa anche dal numero di telefono registrato).</p>
+<p>3. Apri la casella di posta: <b>l&#x27;email di recupero arriva di solito nel giro di pochi minuti.</b> Se non la vedi, dai un&#x27;occhiata allo spam prima di ritentare.</p>
+<p>4. Segui il link nel messaggio e imposta una password nuova.</p>
+<p>Sulla chiave nuova la piattaforma di solito chiede <b>almeno 8 caratteri, con almeno una maiuscola e un carattere alfanumerico</b> — un paletto pensato per complicare la vita a chi prova ad entrare dove non deve. Consiglio spassionato: vai oltre il minimo, punta a 12-16 caratteri mescolando maiuscole, minuscole, numeri e simboli. E per carità, non riciclare quella dell&#x27;email o dell&#x27;home banking.</p>
+<p>Impostata la password nuova, torni alla pagina di accesso e rifai la trafila di prima. Se hai il sospetto che qualcuno ci abbia messo le mani, esci da tutti i dispositivi e scrivi subito all&#x27;assistenza.</p>
+
+<div class="btnrow"><a class="hot" href="/referral-link">Registrati su Mystake</a><a href="/referral-link">Bonus fino a 1.500 €</a><a href="/referral-link">Gioco del pollo <span class="st">★ 4.5</span></a><a href="/referral-link">Scommesse live</a></div>
+<h2>Problemi di accesso comuni e soluzioni</h2>
+<p>Buona parte dei problemi di login la risolvi da solo in un paio di minuti. Ecco la tabella di riferimento:</p>
+<div class="tbl"><table><thead><tr><th>Problema</th><th>Causa probabile</th><th>Soluzione</th></tr></thead><tbody><tr><td>&quot;Password errata&quot;</td><td>Caps Lock attivo, spazio finale, carattere sbagliato</td><td>Riscrivi la password a mano (niente copia-incolla), controlla maiuscole/minuscole; se il dubbio resta, usa &quot;Password dimenticata?&quot;</td></tr><tr><td>Email non riconosciuta</td><td>Refuso o email diversa da quella registrata</td><td>Verifica l&#x27;indirizzo lettera per lettera; controlla nella tua posta quale email hai usato all&#x27;iscrizione</td></tr><tr><td>Email di recupero non arriva</td><td>Filtro antispam o indirizzo errato</td><td>Controlla spam e posta indesiderata; aspetta qualche minuto; se niente, scrivi in Live Chat</td></tr><tr><td>Pagina che non carica o si blocca</td><td>Connessione ballerina, cache del browser</td><td>Passa dal WiFi ai dati mobili (o viceversa), svuota la cache, prova un altro browser</td></tr><tr><td>Account bloccato</td><td>Troppi tentativi falliti o controllo di sicurezza</td><td>Non insistere: contatta l&#x27;assistenza via Live Chat, potrebbe servire una verifica dell&#x27;identità</td></tr></tbody></table></div>
+<p>Sul blocco dell&#x27;account spendo due parole in più. Dopo una serie di tentativi andati a vuoto, il sistema sospende l&#x27;accesso per un po&#x27; come misura anti-intrusione: è una protezione, non una punizione. In questi casi meglio muoversi così:</p>
+<ul><li><b>Non insistere</b> con altri tentativi sul modulo di login: ognuno allunga i tempi di sblocco.</li><li><b>Scrivi subito in Live Chat</b> al supporto e spiega la situazione.</li><li><b>Tieni pronto un documento d&#x27;identità:</b> un controllo veloce spesso basta a riattivare il profilo.</li></ul>
+<p>Se invece entri ma il saldo o certe funzioni non si vedono, quasi sempre la colpa è della cache: un refresh forzato (Ctrl+F5 su desktop) sistema tutto nel 90% dei casi.</p>
+<h2>Consigli per un accesso sicuro</h2>
+<p>Su un conto gioco girano soldi veri, quindi la sicurezza dell&#x27;accesso non è un dettaglio da liquidare in fretta. Queste sono le regole che ogni giocatore dovrebbe farsi sue:</p>
+<ul><li><b>Usa una password unica e robusta.</b> Mai la stessa di altri siti: se un servizio terzo si fa bucare, i malintenzionati provano quelle credenziali dappertutto. Mescola maiuscole, minuscole, numeri e simboli.</li><li><b>Affidati a un gestore di password</b> (Bitwarden, 1Password e compagnia): genera e ricorda le chiavi complesse al posto tuo, e ti risparmia il giro del recupero ogni due settimane.</li><li><b>Attiva l&#x27;autenticazione a due fattori se c&#x27;è</b> tra le impostazioni del profilo: un codice in più e rubarti la sola password non serve a niente.</li><li><b>Non condividere mai le credenziali</b>, nemmeno con amici o parenti. Nessun operatore serio ti chiederà la password via email o chat — chi lo fa è un truffatore, senza mezzi termini.</li><li><b>Esci sempre dai dispositivi condivisi.</b> PC dell&#x27;ufficio, tablet di casa, telefono di un amico: logout a fine sessione, non basta chiudere la scheda.</li><li><b>Lascia perdere le reti WiFi pubbliche</b> per entrare nel conto. Bar, aeroporti e hotel sono terreno fertile per chi intercetta; se proprio non puoi farne a meno, usa una VPN o i dati mobili.</li><li><b>Controlla l&#x27;URL prima di digitare i dati:</b> solo mystake.com, niente varianti strane arrivate via email o banner.</li></ul>
+<p>Cinque minuti di configurazione oggi ti risparmiano settimane di grattacapi con l&#x27;assistenza domani.</p>
+
+<div class="ctamini"><div class="tt">Depositi in crypto: bonus <b>170%</b> subito dopo la registrazione</div><a href="/referral-link">Gioca ora »</a></div>
+<h2>Come registrarsi su MyStake</h2>
+<p>Se un account ancora non ce l&#x27;hai, la registrazione viene prima del login e ti porta via un paio di minuti:</p>
+<p>1. Clicca sul pulsante rosso <b>&quot;Sign Up&quot;</b> in alto a destra nella home page.</p>
+<p>2. Compila i tre campi: <b>email valida</b>, <b>username</b> e <b>password</b> (minimo 8 caratteri, una maiuscola, un carattere alfanumerico). Attento allo username: <b>una volta scelto non si tocca più</b>, quindi pensaci un secondo prima di confermare.</p>
+<p>3. Spunta la casella <b>&quot;I accept Terms &amp; Conditions and Privacy Policy&quot;</b>.</p>
+<p>4. Premi il pulsante rosso <b>&quot;Finish&quot;</b>. Se hai compilato male qualche campo, un testo rosso ti dice esattamente dove mettere mano.</p>
+<p>La piattaforma è roba da <b>maggiorenni (+18)</b>: la verifica dell&#x27;età fa parte del gioco, e prima o poi ti chiederanno di dimostrarla con un documento. Conferma anche l&#x27;email, così eviti rogne col recupero password in futuro.</p>
+<p>Appena registrato puoi già giocare <b>depositando in criptovalute</b> (Bitcoin, Ethereum e altre). Per sbloccare gli altri metodi di pagamento devi completare il profilo — e qui entra in scena il KYC. Per i dettagli su bonus di benvenuto e catalogo giochi, dai un&#x27;occhiata alle pagine dedicate.</p>
+<h2>Verifica dell&#x27;account (KYC) per l&#x27;accesso completo</h2>
+<p>Il login base gira anche senza verifica, ma per muoverti senza restrizioni — sui prelievi soprattutto, e sui metodi di pagamento che non siano cripto — l&#x27;account va verificato. La procedura parte da dentro il profilo:</p>
+<p>1. Dopo l&#x27;accesso, clicca su <b>&quot;My Account&quot;</b> in alto a destra.</p>
+<p>2. Entra in <b>&quot;Personal Information&quot;</b>: username, password ed email li trovi già compilati.</p>
+<p>3. Riempi i campi che restano: <b>nome, cognome, data di nascita, numero di cellulare, paese, città e indirizzo</b>.</p>
+<p>4. Quando te li chiedono, carica i documenti: <b>carta d&#x27;identità o passaporto</b> e una <b>prova di residenza</b> (una bolletta o un estratto conto recente).</p>
+<p>La validazione dei documenti va di solito da poche ore a qualche giorno lavorativo. Sistemare il KYC in anticipo — e non al primo prelievo — è la mossa furba: ti eviti blocchi a sorpresa, pagamenti che slittano e richieste all&#x27;ultimo minuto proprio quando vuoi incassare una vincita. Limiti e tempi di prelievo cambiano: controlla sempre le condizioni aggiornate nella tua area personale prima di chiedere un pagamento.</p>
+
+<div class="ctamini"><div class="tt">Bonus casinò <b>300% fino a 1.500 €</b> sui primi tre depositi</div><a href="/referral-link">Gioca ora »</a></div>
+<h2>Contattare l&#x27;assistenza clienti</h2>
+<p>Se dopo tutti i tentativi ancora non entri, l&#x27;assistenza si raggiunge in due modi, entrambi a disposizione anche senza login:</p>
+<ul><li><b>Live Chat 24/7</b>: clicca su <b>&quot;Contact&quot;</b> (lo vedi su qualsiasi pagina del sito), oppure scendi in fondo alla pagina dove c&#x27;è l&#x27;opzione Live Chat. Si apre una finestra e un operatore ti risponde dal vivo — è il canale più rapido per sbloccare un account o togliere di mezzo un problema urgente.</li><li><b>Email</b>: scrivi a <b>support@mystake.email</b>, mettendo nell&#x27;oggetto un riassunto breve del problema e nel corpo l&#x27;indirizzo email a cui vuoi essere ricontattato. Per le cose non urgenti è la scelta giusta, perché lascia una traccia scritta di tutto.</li></ul>
+<p>Per i grattacapi di login punta dritto sulla chat: descrivi cosa succede (account bloccato, email di recupero mai arrivata, errore sulle credenziali), tieni sottomano username ed email registrata, e mettiti in conto una possibile richiesta di documento se la faccenda tocca la sicurezza del conto.</p>
+<h2>Domande frequenti (FAQ)</h2>
+<h3>Cosa faccio se non ricevo l&#x27;email di recupero password?</h3>
+<p>Prima cosa, controlla spam e posta indesiderata, poi verifica di aver scritto esattamente l&#x27;indirizzo con cui ti sei registrato. L&#x27;email di norma arriva in pochi minuti: se dopo un quarto d&#x27;ora non c&#x27;è ancora niente, apri la Live Chat dal pulsante &quot;Contact&quot; e chiedi aiuto diretto.</p>
+<h3>Posso accedere a MyStake da più dispositivi?</h3>
+<p>Sì. Le stesse credenziali funzionano da web e da mobile senza limiti: passi dal PC allo smartphone senza intoppi. L&#x27;unica raccomandazione è fare sempre logout sui dispositivi condivisi o che non usi tutti i giorni.</p>
+<h3>Come posso contattare l&#x27;assistenza di MyStake?</h3>
+<p>Due canali: la <b>Live Chat 24/7</b>, che apri dal pulsante &quot;Contact&quot; su qualsiasi pagina, e l&#x27;<b>email</b> all&#x27;indirizzo support@mystake.email. Per i problemi di accesso urgenti conviene la chat, perché ti risponde un operatore in tempo reale.</p>
+<h3>Perché il mio account è bloccato?</h3>
+<p>Quasi sempre per troppi tentativi falliti uno dietro l&#x27;altro, o per un controllo di sicurezza automatico. Non continuare a provare: contatta il supporto via Live Chat e, se te lo chiedono, fornisci un documento d&#x27;identità per la verifica. Una volta confermata la titolarità, l&#x27;account torna attivo.</p>
+<h3>Devo verificare l&#x27;identità per fare il login?</h3>
+<p>No, per l&#x27;accesso base bastano email e password. La verifica KYC serve però per prelevare le vincite, usare metodi di pagamento diversi dalle cripto e sfruttare la piattaforma senza restrizioni. Farla subito dopo la registrazione ti evita blocchi e attese quando conta davvero.</p>
+<h3>MyStake è legale in Italia?</h3>
+<p>L&#x27;operatore è gestito da GTW B.V., società di Curaçao con licenza della Curaçao Gaming Authority (numero OGL/2024/250/0115). Non è quindi un sito con concessione ADM italiana, ma una piattaforma offshore autorizzata dalla propria giurisdizione: informati e gioca in modo responsabile.</p>
+  </article>
+  <div class="clusterFoot"><a href="/">Home</a><a href="/bonus/">Bonus</a><a href="/casino/">Casinò</a><a href="/scommesse/">Scommesse</a><a href="/chicken-pollo/">Gioco del pollo</a><a href="/dino/">Dino</a><a href="/accesso/">Accesso</a><a href="/app/">App</a><a href="/recensioni/">Recensioni</a></div>
+</main>
+<footer class="ft">
+  <div class="container">
+    <div class="ft-cols">
+      <div><h4>Casinò</h4>
+        <a href="/referral-link">Slot</a><a href="/referral-link">Casinò Live</a><a href="/referral-link">MiniGiochi</a><a href="/referral-link">Originals</a><a href="/referral-link">Tornei</a>
+      </div>
+      <div><h4>Scommesse</h4>
+        <a href="/referral-link">Sports</a><a href="/referral-link">Sport in diretta</a><a href="/referral-link">Virtuali</a><a href="/referral-link">E-sports</a><a href="/referral-link">Corsa</a>
+      </div>
+      <div><h4>Guida Mystake</h4>
+        <a href="/bonus/">Bonus e codice promo</a><a href="/chicken-pollo/">Gioco del pollo</a><a href="/dino/">Dino</a><a href="/recensioni/">Recensioni</a><a href="/accesso/">Accesso</a><a href="/app/">App</a>
+      </div>
+      <div><h4>Assistenza</h4>
+        <a href="/referral-link">Assistenza dal Vivo</a><a href="/referral-link">Affiliato</a><a href="/referral-link">Termini e condizioni</a><a href="/referral-link">Gioco responsabile</a>
+      </div>
+    </div>
+    <div class="pays">
+      <span>VISA</span><span>Mastercard</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Litecoin</span><span>MiFinity</span>
+    </div>
+    <div class="comp">
+      <div class="age">18+</div>
+      <p>Il gioco può causare dipendenza patologica. Gioca responsabilmente.<br>
+      Mystake è un casinò internazionale (non AAMS) operato da Santeda International B.V., Curaçao. Le quote mostrate sono indicative.<br>
+      © 2026 · Sito informativo indipendente su Mystake Casino.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

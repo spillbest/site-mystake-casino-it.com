@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyStake Bet: scommesse crypto, casinò e bonus</title>
+<meta name="description" content="Recensione MyStake Bet: sport, casinò crypto, minigiochi, bonus e prelievi. Licenza Curaçao, senza concessione ADM italiana.">
+<link rel="canonical" href="https://mystake-casino-it.com/scommesse/">
+<link rel="alternate" hreflang="it-it" href="https://mystake-casino-it.com/scommesse/">
+<link rel="alternate" hreflang="x-default" href="https://mystake-casino-it.com/">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<style>
+:root{
+  --bg:#14161d; --panel:#1b1e27; --card:#232734; --line:rgba(255,255,255,.08);
+  --blue:#00AAEB; --blue-d:#0090c8; --red:#ED2B4E; --red-d:#c91f3e;
+  --txt:#fff; --mut:rgba(255,255,255,.55); --mut2:rgba(255,255,255,.75);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+
+/* ---------- header (объединённый) ---------- */
+.hd{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.hd .container{display:flex;align-items:center;gap:18px;min-height:64px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.logo img{height:36px;width:auto}
+.hnav{display:flex;align-items:center;gap:4px;flex:1;min-width:0;padding:9px 16px 0 0;overflow-x:auto;scrollbar-width:none}
+.hnav::-webkit-scrollbar{display:none}
+.hnav a{position:relative;padding:8px 10px;border-radius:8px;font-weight:600;font-size:13.5px;color:var(--mut2);white-space:nowrap}
+.hnav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.hnav .tag{position:absolute;top:-7px;right:2px;background:var(--red);color:#fff;font-size:9px;font-weight:700;line-height:1;padding:3px 5px;border-radius:4px;text-transform:uppercase}
+.auth{display:flex;align-items:center;gap:8px;margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 18px;border-radius:8px;font-weight:700;font-size:13.5px;cursor:pointer;border:0;transition:background .15s}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-d)}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-d)}
+.lang{display:flex;align-items:center;gap:6px;font-weight:700;font-size:13px;color:var(--mut2)}
+.lang svg{border-radius:2px}
+
+/* ---------- slider ---------- */
+.hero{margin-top:16px}
+.slider{position:relative;overflow:hidden;border-radius:14px;background:var(--card)}
+.slides{display:flex;transition:transform .45s ease}
+.slide{flex:0 0 100%}
+.slide img{width:100%;height:auto;aspect-ratio:1920/445;object-fit:cover}
+@media(max-width:920px){.slide img{aspect-ratio:702/306}}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:10px}
+.dots span{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22);cursor:pointer;transition:background .2s}
+.dots span.on{background:var(--blue)}
+.snav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(20,22,29,.65);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2}
+.snav:hover{background:rgba(20,22,29,.9)}
+.snav.prev{left:12px}.snav.next{right:12px}
+
+/* ---------- категории ---------- */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.cat{position:relative;border-radius:14px;overflow:hidden;border:1px solid;transition:transform .15s}
+.cat:hover{transform:translateY(-3px)}
+.cat img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/7}
+.cat .text{position:absolute;left:16px;bottom:12px;font-weight:800;font-size:19px;text-transform:uppercase;letter-spacing:.5px;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.cat.g{border-color:#22c55e;box-shadow:0 0 18px rgba(34,197,94,.25)}
+.cat.r{border-color:#ef4444;box-shadow:0 0 18px rgba(239,68,68,.25)}
+.cat.p{border-color:#8b5cf6;box-shadow:0 0 18px rgba(139,92,246,.25)}
+.cat.o{border-color:#f59e0b;box-shadow:0 0 18px rgba(245,158,11,.25)}
+
+/* ---------- h1 + лид ---------- */
+.intro{margin:28px 0 6px}
+.intro h1{font-size:26px;line-height:1.25;margin-bottom:8px}
+.intro p{color:var(--mut2);max-width:860px}
+
+/* ---------- секции-свайперы ---------- */
+.row{margin-top:30px}
+.row-hd{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.row-hd svg{flex:none}
+.row-hd .title{font-size:19px;font-weight:800}
+.row-hd .acts{margin-left:auto;display:flex;align-items:center;gap:12px}
+.row-hd .all{color:var(--blue);font-weight:700;font-size:13.5px}
+.row-hd .all:hover{text-decoration:underline}
+.arrows{display:flex;gap:6px}
+.arr{width:30px;height:30px;border-radius:8px;background:var(--card);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.arr:hover{background:#2c3140}
+.pills{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:12px}
+.pills::-webkit-scrollbar{display:none}
+.pills a{flex:none;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:7px 15px;font-size:13px;font-weight:600;color:var(--mut2)}
+.pills a:hover{color:#fff;border-color:var(--blue)}
+.strip{display:flex;gap:11px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px}
+.strip::-webkit-scrollbar{display:none}
+.strip a{flex:none;border-radius:10px;overflow:hidden;transition:transform .15s}
+.strip a:hover{transform:translateY(-3px)}
+.strip img{width:100%;height:auto}
+.w-slot img{aspect-ratio:210/264;object-fit:cover}
+.w-live img{aspect-ratio:254/320;object-fit:cover}
+.w-slot a{width:131px}
+.w-live a{width:152px}
+.w-show a{width:320px}
+.w-sport a{width:189px}
+
+/* ---------- Serie A ---------- */
+.matches{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.matches::-webkit-scrollbar{display:none}
+.match{flex:0 0 315px;background:var(--card);border-radius:12px;padding:14px}
+.match .top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--mut);margin-bottom:14px}
+.match .region{background:rgba(0,170,235,.12);color:var(--blue);font-weight:700;padding:3px 8px;border-radius:6px}
+.match .mid{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.match .team{display:flex;flex-direction:column;align-items:center;gap:6px;width:38%;font-weight:700;font-size:13px;text-align:center}
+.match .vs{color:var(--mut);font-weight:800;font-size:12px;letter-spacing:1px}
+.match .pos{display:flex;gap:8px}
+.match .pos a{flex:1;background:#1a1d27;border:1px solid var(--line);border-radius:8px;padding:7px 0;display:flex;flex-direction:column;align-items:center;gap:2px}
+.match .pos a:hover{border-color:var(--blue)}
+.match .pos .n{font-size:11px;color:var(--mut)}
+.match .pos .c{font-weight:800;color:var(--blue)}
+.badge{width:37px;height:37px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+.note{font-size:12px;color:var(--mut);margin-top:8px}
+
+/* ---------- SEO ---------- */
+.seo{margin-top:36px}
+.seo h2{font-size:20px;margin:26px 0 10px}
+.seo h2:first-child{margin-top:0}
+.seo p{color:var(--mut2);margin-bottom:12px}
+.seo a{color:var(--blue)}
+.seo a:hover{text-decoration:underline}
+.seo ul,.seo ol{padding-left:24px;margin:0 0 12px}
+.seo li{color:var(--mut2);margin:4px 0}
+.seo a.btn{color:#fff}
+.seo a.btn:hover{text-decoration:none}
+.seo table{width:100%;border-collapse:collapse;margin:14px 0}
+.seo td{padding:9px 12px;border-bottom:1px solid var(--line);color:var(--mut2);font-size:14px}
+.seo td:first-child{color:#fff;font-weight:600;width:36%}
+.pros{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+.pros div{background:var(--card);border-radius:10px;padding:16px}
+.pros h3{font-size:14px;margin-bottom:8px}
+.pros ul{list-style:none}
+.pros li{color:var(--mut2);font-size:14px;padding:4px 0 4px 22px;position:relative}
+.pros .si li::before{content:"✓";position:absolute;left:0;color:#22c55e;font-weight:700}
+.pros .no li::before{content:"✕";position:absolute;left:0;color:#ef4444;font-weight:700}
+.seo details{background:var(--card);border-radius:10px;margin-bottom:8px;padding:0}
+.seo summary{cursor:pointer;font-weight:600;padding:13px 16px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.seo summary::after{content:"+";color:var(--blue);font-size:18px;font-weight:400}
+.seo details[open] summary::after{content:"–"}
+.seo details p{padding:0 16px 13px}
+.cta-box{background:linear-gradient(120deg,#1b2a3d,#16202e);border:1px solid rgba(0,170,235,.35);border-radius:12px;padding:20px;margin:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.cta-box .t{font-weight:800;font-size:17px}
+.cta-box .s{color:var(--mut2);font-size:13.5px}
+
+/* ---------- footer ---------- */
+.ft{background:var(--panel);border-top:1px solid var(--line);margin-top:44px;padding:36px 0 26px}
+.ft-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:26px}
+.ft-cols h4{font-size:13px;text-transform:uppercase;letter-spacing:.8px;color:var(--mut);margin-bottom:12px}
+.ft-cols a{display:block;color:var(--mut2);font-size:14px;padding:4px 0}
+.ft-cols a:hover{color:#fff}
+.pays{display:flex;gap:8px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--line)}
+.pays span{background:var(--card);border-radius:6px;padding:6px 13px;font-size:12px;font-weight:700;color:var(--mut2)}
+.comp{display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line);padding-top:18px}
+.age{flex:none;width:40px;height:40px;border-radius:50%;border:2px solid var(--red);color:var(--red);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+.comp p{color:var(--mut);font-size:12.5px;line-height:1.6}
+
+/* ---------- adaptive ---------- */
+@media(max-width:1100px){
+  .hnav{order:3;flex-basis:100%;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+  .hnav::-webkit-scrollbar{display:none}
+}
+@media(max-width:920px){
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .ft-cols{grid-template-columns:repeat(2,1fr)}
+  .intro h1{font-size:22px}
+}
+@media(max-width:560px){
+  .logo img{height:30px}
+  .btn{padding:0 13px;font-size:12.5px}
+  .cats{gap:10px}
+  .cat .text{font-size:15px;left:10px;bottom:8px}
+  .pros{grid-template-columns:1fr}
+  .ft-cols{grid-template-columns:1fr 1fr;gap:16px}
+  .w-slot a{width:112px}.w-live a{width:130px}.w-show a{width:260px}.w-sport a{width:160px}
+  .match{flex-basis:280px}
+}
+</style>
+<style>
+.subTop{background:linear-gradient(120deg,#1b2a3d,#16202e);border-bottom:1px solid var(--line)}
+.subTop .container{padding-top:16px;padding-bottom:20px}
+.crumbs{font-size:12px;color:var(--mut);margin-bottom:10px}.crumbs a{color:var(--blue)}.crumbs b{color:#fff}
+.subTop h1{font-size:28px;line-height:1.22;max-width:840px}
+.clusterNav{background:var(--panel);border-bottom:1px solid var(--line)}
+.clusterNav .container{display:flex;gap:4px 6px;flex-wrap:wrap;padding:10px 16px;overflow-x:auto;scrollbar-width:none}
+.clusterNav .container::-webkit-scrollbar{display:none}
+.clusterNav a{flex:none;padding:7px 12px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--mut2);white-space:nowrap}
+.clusterNav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.clusterNav a.on{color:#fff;background:var(--blue)}
+.seo .tbl{overflow-x:auto;margin:14px 0}
+.seo ul,.seo ol{padding-left:24px;margin:0 0 13px}
+.seo li{margin:4px 0;color:var(--mut2)}
+.seo h3{font-size:16px;margin:18px 0 8px}
+.clusterFoot{display:flex;gap:8px 16px;flex-wrap:wrap;padding:20px 0 4px;border-top:1px solid var(--line);margin-top:26px}
+.clusterFoot a{color:var(--blue);font-weight:600;font-size:13.5px}
+.gnav{margin:34px 0 8px}
+.gnav h2{font-size:20px;margin-bottom:14px}
+.gnav-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gnav-grid a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:5px;transition:transform .15s,border-color .15s}
+.gnav-grid a:hover{transform:translateY(-3px);border-color:var(--blue);text-decoration:none}
+.gnav-grid .t{font-weight:800;font-size:15px;color:#fff;display:flex;align-items:center;justify-content:space-between}
+.gnav-grid .t::after{content:"→";color:var(--blue);font-weight:400}
+.gnav-grid .d{font-size:12.5px;color:var(--mut);line-height:1.45}
+@media(max-width:920px){.gnav-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.gnav-grid{grid-template-columns:1fr}}
+.subMain{margin-top:26px}
+.subMain .seo{margin-top:0;max-width:880px}
+/* ---- тематические блоки внутриков ---- */
+.ximg{display:block;width:100%;max-width:620px;height:auto;border-radius:14px;margin:22px auto;border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.35)}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.btnrow a{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:9px 18px;font-size:13.5px;font-weight:700;color:#fff;transition:border-color .15s}
+.btnrow a:hover{border-color:var(--blue);text-decoration:none}
+.btnrow a .st{color:#ffc93c;font-size:12px}
+.btnrow a.hot{background:var(--blue);border-color:var(--blue)}
+.ctamini{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:linear-gradient(120deg,#1b2a3d,#16202e);border:1px solid rgba(0,170,235,.3);border-radius:12px;padding:14px 18px;margin:20px 0}
+.ctamini .tt{font-weight:700;font-size:14.5px}.ctamini .tt b{color:var(--blue)}
+.ctamini a{flex:none;background:var(--red);color:#fff;border-radius:8px;padding:9px 18px;font-weight:700;font-size:13.5px}
+.ctamini a:hover{background:var(--red-d);text-decoration:none}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.sgrid a{border-radius:10px;overflow:hidden;transition:transform .15s;position:relative}
+.sgrid a:hover{transform:translateY(-3px)}
+.sgrid img{width:100%;aspect-ratio:210/264;object-fit:cover;height:auto}
+.bcards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
+.bcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 18px;display:flex;flex-direction:column;gap:6px}
+.bcard .k{font-size:11.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);font-weight:800}
+.bcard .v{font-size:26px;font-weight:800;color:#fff;line-height:1.1}
+.bcard .v small{font-size:14px;color:var(--blue);font-weight:700;display:block;margin-top:3px}
+.bcard .d{font-size:12.5px;color:var(--mut2);flex:1}
+.bcard a{align-self:flex-start;background:var(--blue);color:#fff;border-radius:8px;padding:9px 16px;font-weight:700;font-size:13px;margin-top:8px}
+.bcard a:hover{background:var(--blue-d);text-decoration:none}
+.ratebox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin:18px 0}
+.ratebox .big{font-size:44px;font-weight:800;color:#fff;line-height:1}
+.ratebox .big small{font-size:16px;color:var(--mut)}
+.ratebox .bars{flex:1;min-width:240px;display:flex;flex-direction:column;gap:8px}
+.rbar{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--mut2)}
+.rbar .lbl{width:110px;flex:none}.rbar .tr{flex:1;height:7px;border-radius:4px;background:rgba(255,255,255,.09);overflow:hidden}
+.rbar .fl{height:100%;border-radius:4px;background:var(--blue)}
+.rbar .num{width:26px;text-align:right;font-weight:700;color:#fff}
+.rvws{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.rvw{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px}
+.rvw-h{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
+.rvw-n{font-weight:700;font-size:13.5px}.rvw-s{color:#ffc93c;font-size:12.5px;letter-spacing:1.5px;white-space:nowrap}
+.rvw-m{font-size:11.5px;color:var(--mut);margin-bottom:7px}
+.rvw-t{font-size:13.5px;color:var(--mut2);line-height:1.55;margin:0}
+.kvbox{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.kv{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.kv .n{font-size:20px;font-weight:800;color:var(--blue)}
+.kv .l{font-size:11.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.loginbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;max-width:420px;margin:18px 0}
+.loginbox .fld{margin-bottom:12px}
+.loginbox label{display:block;font-size:12px;color:var(--mut);margin-bottom:5px;font-weight:700}
+.loginbox input{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:11px 12px;color:#fff;font-size:14px;pointer-events:none}
+.loginbox .sub{display:block;text-align:center;background:var(--blue);color:#fff;border-radius:8px;padding:12px;font-weight:700;font-size:14.5px;margin-top:14px}
+.loginbox .sub:hover{background:var(--blue-d);text-decoration:none}
+.loginbox .alt{text-align:center;font-size:12.5px;color:var(--mut);margin-top:10px}
+.loginbox .alt a{color:var(--blue)}
+.appbtns{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.appbtns a{display:inline-flex;align-items:center;gap:11px;background:#000;border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:10px 18px;min-width:200px}
+.appbtns a:hover{border-color:var(--blue);text-decoration:none}
+.appbtns .txt small{display:block;font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
+.appbtns .txt b{font-size:15.5px;color:#fff}
+.stores{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.store{flex:1;min-width:200px;background:var(--card);border:1px dashed rgba(255,255,255,.2);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:10px;color:var(--mut);font-size:13px}
+.store .x{color:#ef4444;font-weight:800}
+@media(max-width:880px){.sgrid{grid-template-columns:repeat(3,1fr)}.bcards{grid-template-columns:1fr}.kvbox{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.rvws{grid-template-columns:1fr}.sgrid{grid-template-columns:repeat(2,1fr)}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mystake-casino-it.com/"}, {"@type": "ListItem", "position": 2, "name": "MyStake Bet: scommesse sportive, casinò cripto e bonus", "item": "https://mystake-casino-it.com/scommesse/"}]}</script>
+</head>
+<body>
+<header class="hd">
+  <div class="container">
+    <a class="logo" href="/"><img src="/assets/logo.svg" alt="Mystake" width="107" height="36"></a>
+    <nav class="hnav">
+      <a href="/referral-link">Sports</a>
+      <a href="/referral-link">Slot</a>
+      <a href="/referral-link">Casinò Live</a>
+      <a href="/referral-link">MiniGiochi<span class="tag">Caldo</span></a>
+      <a href="/referral-link">Promozioni<span class="tag">Caldo</span></a>
+    </nav>
+    <div class="auth">
+      <a class="btn btn-red" href="/referral-link">Registro</a>
+      <a class="btn btn-blue" href="/referral-link">Accedi</a>
+    </div>
+    <span class="lang"><svg width="20" height="14" viewBox="0 0 3 2"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg>IT</span>
+  </div>
+</header>
+<section class="subTop"><div class="container">
+  <div class="crumbs"><a href="/">Home</a> / <b>Scommesse</b></div>
+  <h1>MyStake Bet: scommesse sportive, casinò cripto e bonus</h1>
+</div></section>
+<div class="clusterNav"><div class="container"><a href="/">Home</a><a href="/bonus/">Bonus</a><a href="/casino/">Casinò</a><a href="/scommesse/" class="on">Scommesse</a><a href="/chicken-pollo/">Gioco del pollo</a><a href="/dino/">Dino</a><a href="/accesso/">Accesso</a><a href="/app/">App</a><a href="/recensioni/">Recensioni</a></div></div>
+<main class="container subMain">
+  <article class="seo">
+
+<img class="ximg" src="/assets/xtra-scommesse.jpg" alt="Scommesse sportive Mystake" loading="lazy">
+<h2>Cos&#x27;è MyStake e come funziona la sua piattaforma di scommesse?</h2>
+<p>MyStake è un bookmaker e casinò online tutto puntato sulle criptovalute, gestito da GTW B.V., società registrata a Curaçao con licenza n. OGL/2024/250/0115 della Curaçao Gaming Authority. Chi cerca &quot;mystake bet&quot; si trova davanti a un operatore <b>non AAMS</b>: licenza internazionale di Curaçao sì, concessione ADM italiana no. E qui serve chiarezza. Prima di aprire il conto tieni bene a mente questo dettaglio, perché in Italia giocare su siti offshore non ti dà le tutele riservate ai concessionari ADM.</p>
+<p>Il sito parla italiano, e poi inglese, spagnolo, francese, tedesco, russo, svedese, finlandese e portoghese brasiliano. Il pubblico a cui si rivolge è netto: chi vuole depositare in cripto, scommettere su un palinsesto largo e saltare tra slot, Casino Live e minigiochi originali senza mai cambiare piattaforma, con supporto multivaluta e assistenza 24/7.</p>
+<div class="cta-box"><div><div class="t">Bonus di benvenuto fino a 1.000 €</div><div class="s">170% sul primo deposito in crypto · 18+ · si applicano requisiti di puntata</div></div><a class="btn btn-blue" style="height:46px;padding:0 28px;font-size:15px" href="/referral-link">Vai a Mystake</a></div><h2>Scommesse sportive su MyStake</h2>
+<p>La sezione sport tocca oltre 50 discipline, con un pre-match profondo e quote in linea sui mercati che contano: esito finale, doppia chance, over/under, handicap, marcatori e multipla. Su margini e quote medie l&#x27;operatore non pubblica numeri ufficiali, quindi il consiglio è semplice: confronta le lavagne partita per partita.</p>
+<h3>Calcio</h3>
+<p>Il calcio è il cuore di tutto: Serie A, Premier League, Liga, Bundesliga, Champions ed Europa League, più campionati minori e tornei internazionali. Sui big match trovi decine di mercati speciali, dai corner ai cartellini. Insomma, c&#x27;è di che riempire la bolletta.</p>
+<h3>Tennis e basket</h3>
+<p>Il tennis copre ATP, WTA e Challenger, con mercati su set, game e handicap. Il basket ha una sua sezione dedicata all&#x27;NBA, oltre a Eurolega e campionati europei. Chiudono il quadro baseball, hockey su ghiaccio, pallavolo, rugby, football americano e Formula 1.</p>
+<h3>eSports</h3>
+<p>Chi punta sul competitive gaming trova League of Legends, CS:GO e Dota 2, con quote live e copertura dei tornei internazionali più importanti.</p>
+
+<div class="tbl-matches"><div class="matches">
+      <div class="match">
+        <div class="top"><span class="region">Serie A</span><span>Ago 22, 2026 / 18:30</span></div>
+        <div class="mid">
+          <div class="team"><span class="badge" style="background:#e11d2e;color:#fff;border:2px solid #111">MIL</span>Milan</div>
+          <span class="vs">VS</span>
+          <div class="team"><span class="badge" style="background:#12a0d7;color:#fff">NAP</span>Napoli</div>
+        </div>
+        <div class="pos">
+          <a href="/referral-link"><span class="n">1</span><span class="c">2.45</span></a>
+          <a href="/referral-link"><span class="n">X</span><span class="c">3.30</span></a>
+          <a href="/referral-link"><span class="n">2</span><span class="c">2.90</span></a>
+        </div>
+      </div>
+      <div class="match">
+        <div class="top"><span class="region">Serie A</span><span>Ago 23, 2026 / 20:45</span></div>
+        <div class="mid">
+          <div class="team"><span class="badge" style="background:#111;color:#fff;border:2px solid #fff">JUV</span>Juventus</div>
+          <span class="vs">VS</span>
+          <div class="team"><span class="badge" style="background:#0068a8;color:#fff;border:2px solid #111">INT</span>Inter</div>
+        </div>
+        <div class="pos">
+          <a href="/referral-link"><span class="n">1</span><span class="c">2.60</span></a>
+          <a href="/referral-link"><span class="n">X</span><span class="c">3.20</span></a>
+          <a href="/referral-link"><span class="n">2</span><span class="c">2.75</span></a>
+        </div>
+      </div>
+      <div class="match">
+        <div class="top"><span class="region">Serie A</span><span>Ago 23, 2026 / 20:45</span></div>
+        <div class="mid">
+          <div class="team"><span class="badge" style="background:#8e1f2f;color:#f0bc42">ROM</span>Roma</div>
+          <span class="vs">VS</span>
+          <div class="team"><span class="badge" style="background:#87d8f7;color:#123">LAZ</span>Lazio</div>
+        </div>
+        <div class="pos">
+          <a href="/referral-link"><span class="n">1</span><span class="c">2.30</span></a>
+          <a href="/referral-link"><span class="n">X</span><span class="c">3.10</span></a>
+          <a href="/referral-link"><span class="n">2</span><span class="c">3.20</span></a>
+        </div>
+      </div>
+    </div>
+    <p class="note">Quote indicative a scopo illustrativo.</p></div>
+<h2>Scommesse live e in diretta</h2>
+<p>Il betting in-play gira con quote che si aggiornano in tempo reale, e l&#x27;interfaccia è pensata per seguire tutto al volo: passi da un match all&#x27;altro senza ricaricare la pagina. La copertura live più ricca? Calcio, basket ed eSports, dove i mercati restano aperti fino agli ultimi minuti.</p>
+<p>Su streaming integrato, cash out e statistiche in diretta l&#x27;operatore non promette nulla su tutti gli eventi: la disponibilità cambia in base alla competizione. Meglio controllare sulla scheda del match prima di piazzare la giocata.</p>
+<h2>Casinò e giochi disponibili su MyStake</h2>
+<p>Il catalogo casinò va oltre i 7.000 titoli, con provider di peso: Pragmatic Play, Play&#x27;n GO, Hacksaw Gaming, Push Gaming, Relax Gaming ed EGT. Tra le slot più giocate spuntano <b>Sugar Rush</b>, <b>Gates of Olympus</b>, <b>5 Lions Megaways</b> e la slot brandizzata <b>Book of MyStake</b>.</p>
+<p>Non mancano i tavoli classici — roulette, blackjack e poker in versione RNG — e un Casino Live con croupier veri: roulette in più lingue e game show come <b>Monopoly</b> e <b>Mega Wheel</b>. Gli RTP non sono raccolti in un unico posto sulla piattaforma: fanno testo le schede dei singoli provider.</p>
+
+<div class="btnrow"><a class="hot" href="/referral-link">Scommesse Serie A</a><a href="/referral-link">Live betting</a><a href="/referral-link">eSports</a><a href="/referral-link">Bonus sport 600 €</a></div>
+<h2>Minigiochi esclusivi di MyStake</h2>
+<p>I minigiochi originali sono la vera firma dell&#x27;operatore, e girano tutti attorno alla stessa meccanica: puntata rapida, moltiplicatore che sale, decisione in pochi secondi.</p>
+<ul><li><b>Chicken</b>: scegli i &quot;polli&quot; sul tavolo evitando l&#x27;osso; ogni scelta giusta spinge su il moltiplicatore.</li><li><b>Dino</b> e <b>Aviator</b>: crash games in cui incassi prima che il dinosauro esploda o l&#x27;aereo se ne voli via.</li><li><b>JetX</b>: il razzo sale, il moltiplicatore cresce, il cash out è tutto una questione di tempismo.</li><li><b>Plinko</b>: la pallina rimbalza tra i pioli fino a un moltiplicatore casuale.</li><li><b>Penalty</b>: indovina l&#x27;angolo del rigore e moltiplichi la puntata.</li></ul>
+<p>Giochi tagliati su misura per sessioni brevi. Ma proprio quella velocità ti obbliga a tenere il budget sotto controllo.</p>
+<h2>Bonus e promozioni</h2>
+<p>Il pacchetto di benvenuto casinò è del <b>170% fino a 1.000 €</b> sul primo deposito. Per lo sport c&#x27;è un bonus del <b>100% fino a 500 $</b>; in diversi mercati non serve alcun codice promozionale.</p>
+<p>Poi si aggiungono bonus sui depositi successivi, tornei slot, un club di bonifica per chi gioca spesso e un programma referral: inviti gli amici con un link unico e prendi un bonus quando si iscrivono e giocano. Occhio al rollover: il volume di gioco e le condizioni di prelievo cambiano da promo a promo, e gli importi esatti possono variare in base al mercato. Controlla sempre la versione aggiornata nei <b>T&amp;C</b> prima di attivare qualunque offerta.</p>
+
+<div class="ctamini"><div class="tt">Quota maggiorata sul primo deposito sport: <b>120% fino a 600 €</b></div><a href="/referral-link">Gioca ora »</a></div>
+<h2>Metodi di pagamento, prelievi e criptovalute</h2>
+<p>Dopo la registrazione base giochi subito <b>solo con criptovalute</b>: Bitcoin, Ethereum, USDT e altre. Per sbloccare carte ed e-wallet tradizionali devi completare la verifica KYC dalla sezione &quot;My Account&quot; → &quot;Personal Information&quot;, inserendo nome, cognome, data di nascita, numero di telefono e indirizzo.</p>
+<p>I limiti di prelievo sono <b>7.500 USD/GBP/EUR a settimana</b> e <b>15.000 al mese</b>, calcolati su base rolling (7 e 30 giorni) dal momento in cui la transazione va a buon fine, non dalla richiesta. Un esempio concreto: prelevi 2.500 il 1° del mese e ti restano 5.000 disponibili fino al giorno 8. I prelievi bancari richiedono fino a 3 giorni lavorativi; le cripto, di regola, viaggiano più veloci. Limiti e disponibilità dei metodi possono cambiare da Paese a Paese: meglio verificarli nel proprio conto.</p>
+<h2>Sicurezza, licenza e gioco responsabile</h2>
+<p>L&#x27;operatore dichiara pagamenti sicuri e un ambiente di gioco protetto, e lavora con licenza della Curaçao Gaming Authority. Ma essendo un sito non AAMS, le tutele ADM qui non ci sono: prima di depositare conviene guardare qualche aspetto pratico.</p>
+<ul><li><b>Prima del deposito</b>: controlla sempre la versione aggiornata di bonus e limiti nei T&amp;C, e i metodi di pagamento disponibili per il tuo Paese.</li><li><b>Gioco responsabile</b>: la piattaforma mette a disposizione strumenti come limiti di deposito e autoesclusione, che gestisci dall&#x27;area account.</li><li><b>Contestazioni su scommesse o pagamenti</b>: il supporto è attivo 24/7 via Live Chat e all&#x27;indirizzo support@mystake.email, con il pulsante &quot;Contact&quot; sempre a portata. Per i problemi urgenti la Live Chat resta il canale più rapido.</li></ul>
+<p>Non esiste un&#x27;app nativa dedicata, ma il sito è pienamente responsive da mobile.</p>
+<p><b>Pro</b>: pagamenti cripto immediati, 50+ sport, 7.000+ giochi, minigiochi esclusivi, bonus generosi.</p>
+<p><b>Contro</b>: licenza non AAMS (nessuna tutela ADM), RTP non pubblicati in un unico punto, limiti di prelievo settimanali che a un high roller possono stare stretti.</p>
+<p>Tirando le somme, è una piattaforma solida per chi gioca in cripto e accetta a occhi aperti il quadro offshore.</p>
+<h2>Domande frequenti su MyStake</h2>
+<h3>MyStake è legale in Italia?</h3>
+<p>Lavora con licenza di Curaçao, quindi è un bookmaker non AAMS: niente concessione ADM italiana, pur avendo una licenza internazionale. In Italia il gioco su siti offshore non è coperto dalle tutele riservate ai concessionari ADM.</p>
+<h3>Quanto è affidabile e sicuro MyStake?</h3>
+<p>La piattaforma dichiara pagamenti protetti e opera sotto licenza della Curaçao Gaming Authority. Resta comunque un operatore offshore: l&#x27;affidabilità va pesata anche guardando gli strumenti di gioco responsabile, le condizioni nei T&amp;C e l&#x27;assistenza clienti.</p>
+<h3>Come ci si registra?</h3>
+<p>Clicca su &quot;Sign Up&quot;, inserisci email, username (non modificabile) e password di almeno 8 caratteri con una maiuscola e un carattere alfanumerico, poi accetta i T&amp;C. Se sbagli un campo, compare un messaggio in rosso che ti segnala l&#x27;errore.</p>
+<h3>Come si riscatta il bonus di benvenuto?</h3>
+<p>Ti basta il primo deposito: il 170% fino a 1.000 € viene applicato secondo le condizioni indicate nei T&amp;C, in molti mercati senza codice promo.</p>
+<h3>Quanto durano i prelievi in cripto?</h3>
+<p>Le transazioni cripto sono le più veloci; i bonifici bancari arrivano a 3 giorni. Restano validi i limiti di 7.500 a settimana e 15.000 al mese.</p>
+<h3>Esiste un&#x27;app mobile?</h3>
+<p>No, niente app da scaricare: il sito gira dal browser mobile con interfaccia ottimizzata per scommesse e casinò.</p>
+  </article>
+  <div class="clusterFoot"><a href="/">Home</a><a href="/bonus/">Bonus</a><a href="/casino/">Casinò</a><a href="/scommesse/">Scommesse</a><a href="/chicken-pollo/">Gioco del pollo</a><a href="/dino/">Dino</a><a href="/accesso/">Accesso</a><a href="/app/">App</a><a href="/recensioni/">Recensioni</a></div>
+</main>
+<footer class="ft">
+  <div class="container">
+    <div class="ft-cols">
+      <div><h4>Casinò</h4>
+        <a href="/referral-link">Slot</a><a href="/referral-link">Casinò Live</a><a href="/referral-link">MiniGiochi</a><a href="/referral-link">Originals</a><a href="/referral-link">Tornei</a>
+      </div>
+      <div><h4>Scommesse</h4>
+        <a href="/referral-link">Sports</a><a href="/referral-link">Sport in diretta</a><a href="/referral-link">Virtuali</a><a href="/referral-link">E-sports</a><a href="/referral-link">Corsa</a>
+      </div>
+      <div><h4>Guida Mystake</h4>
+        <a href="/bonus/">Bonus e codice promo</a><a href="/chicken-pollo/">Gioco del pollo</a><a href="/dino/">Dino</a><a href="/recensioni/">Recensioni</a><a href="/accesso/">Accesso</a><a href="/app/">App</a>
+      </div>
+      <div><h4>Assistenza</h4>
+        <a href="/referral-link">Assistenza dal Vivo</a><a href="/referral-link">Affiliato</a><a href="/referral-link">Termini e condizioni</a><a href="/referral-link">Gioco responsabile</a>
+      </div>
+    </div>
+    <div class="pays">
+      <span>VISA</span><span>Mastercard</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Litecoin</span><span>MiFinity</span>
+    </div>
+    <div class="comp">
+      <div class="age">18+</div>
+      <p>Il gioco può causare dipendenza patologica. Gioca responsabilmente.<br>
+      Mystake è un casinò internazionale (non AAMS) operato da Santeda International B.V., Curaçao. Le quote mostrate sono indicative.<br>
+      © 2026 · Sito informativo indipendente su Mystake Casino.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

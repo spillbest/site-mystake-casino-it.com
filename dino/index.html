@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dino MyStake: guida al crash game, bonus e strategie</title>
+<meta name="description" content="Scopri come giocare a Dino MyStake: puntate, cash out, demo gratis, bonus, strategie, depositi in euro e Bitcoin. Gioca responsabilmente.">
+<link rel="canonical" href="https://mystake-casino-it.com/dino/">
+<link rel="alternate" hreflang="it-it" href="https://mystake-casino-it.com/dino/">
+<link rel="alternate" hreflang="x-default" href="https://mystake-casino-it.com/">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<style>
+:root{
+  --bg:#14161d; --panel:#1b1e27; --card:#232734; --line:rgba(255,255,255,.08);
+  --blue:#00AAEB; --blue-d:#0090c8; --red:#ED2B4E; --red-d:#c91f3e;
+  --txt:#fff; --mut:rgba(255,255,255,.55); --mut2:rgba(255,255,255,.75);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+
+/* ---------- header (объединённый) ---------- */
+.hd{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.hd .container{display:flex;align-items:center;gap:18px;min-height:64px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.logo img{height:36px;width:auto}
+.hnav{display:flex;align-items:center;gap:4px;flex:1;min-width:0;padding:9px 16px 0 0;overflow-x:auto;scrollbar-width:none}
+.hnav::-webkit-scrollbar{display:none}
+.hnav a{position:relative;padding:8px 10px;border-radius:8px;font-weight:600;font-size:13.5px;color:var(--mut2);white-space:nowrap}
+.hnav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.hnav .tag{position:absolute;top:-7px;right:2px;background:var(--red);color:#fff;font-size:9px;font-weight:700;line-height:1;padding:3px 5px;border-radius:4px;text-transform:uppercase}
+.auth{display:flex;align-items:center;gap:8px;margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 18px;border-radius:8px;font-weight:700;font-size:13.5px;cursor:pointer;border:0;transition:background .15s}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-d)}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-d)}
+.lang{display:flex;align-items:center;gap:6px;font-weight:700;font-size:13px;color:var(--mut2)}
+.lang svg{border-radius:2px}
+
+/* ---------- slider ---------- */
+.hero{margin-top:16px}
+.slider{position:relative;overflow:hidden;border-radius:14px;background:var(--card)}
+.slides{display:flex;transition:transform .45s ease}
+.slide{flex:0 0 100%}
+.slide img{width:100%;height:auto;aspect-ratio:1920/445;object-fit:cover}
+@media(max-width:920px){.slide img{aspect-ratio:702/306}}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:10px}
+.dots span{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22);cursor:pointer;transition:background .2s}
+.dots span.on{background:var(--blue)}
+.snav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(20,22,29,.65);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2}
+.snav:hover{background:rgba(20,22,29,.9)}
+.snav.prev{left:12px}.snav.next{right:12px}
+
+/* ---------- категории ---------- */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.cat{position:relative;border-radius:14px;overflow:hidden;border:1px solid;transition:transform .15s}
+.cat:hover{transform:translateY(-3px)}
+.cat img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/7}
+.cat .text{position:absolute;left:16px;bottom:12px;font-weight:800;font-size:19px;text-transform:uppercase;letter-spacing:.5px;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.cat.g{border-color:#22c55e;box-shadow:0 0 18px rgba(34,197,94,.25)}
+.cat.r{border-color:#ef4444;box-shadow:0 0 18px rgba(239,68,68,.25)}
+.cat.p{border-color:#8b5cf6;box-shadow:0 0 18px rgba(139,92,246,.25)}
+.cat.o{border-color:#f59e0b;box-shadow:0 0 18px rgba(245,158,11,.25)}
+
+/* ---------- h1 + лид ---------- */
+.intro{margin:28px 0 6px}
+.intro h1{font-size:26px;line-height:1.25;margin-bottom:8px}
+.intro p{color:var(--mut2);max-width:860px}
+
+/* ---------- секции-свайперы ---------- */
+.row{margin-top:30px}
+.row-hd{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.row-hd svg{flex:none}
+.row-hd .title{font-size:19px;font-weight:800}
+.row-hd .acts{margin-left:auto;display:flex;align-items:center;gap:12px}
+.row-hd .all{color:var(--blue);font-weight:700;font-size:13.5px}
+.row-hd .all:hover{text-decoration:underline}
+.arrows{display:flex;gap:6px}
+.arr{width:30px;height:30px;border-radius:8px;background:var(--card);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.arr:hover{background:#2c3140}
+.pills{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:12px}
+.pills::-webkit-scrollbar{display:none}
+.pills a{flex:none;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:7px 15px;font-size:13px;font-weight:600;color:var(--mut2)}
+.pills a:hover{color:#fff;border-color:var(--blue)}
+.strip{display:flex;gap:11px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px}
+.strip::-webkit-scrollbar{display:none}
+.strip a{flex:none;border-radius:10px;overflow:hidden;transition:transform .15s}
+.strip a:hover{transform:translateY(-3px)}
+.strip img{width:100%;height:auto}
+.w-slot img{aspect-ratio:210/264;object-fit:cover}
+.w-live img{aspect-ratio:254/320;object-fit:cover}
+.w-slot a{width:131px}
+.w-live a{width:152px}
+.w-show a{width:320px}
+.w-sport a{width:189px}
+
+/* ---------- Serie A ---------- */
+.matches{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.matches::-webkit-scrollbar{display:none}
+.match{flex:0 0 315px;background:var(--card);border-radius:12px;padding:14px}
+.match .top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--mut);margin-bottom:14px}
+.match .region{background:rgba(0,170,235,.12);color:var(--blue);font-weight:700;padding:3px 8px;border-radius:6px}
+.match .mid{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.match .team{display:flex;flex-direction:column;align-items:center;gap:6px;width:38%;font-weight:700;font-size:13px;text-align:center}
+.match .vs{color:var(--mut);font-weight:800;font-size:12px;letter-spacing:1px}
+.match .pos{display:flex;gap:8px}
+.match .pos a{flex:1;background:#1a1d27;border:1px solid var(--line);border-radius:8px;padding:7px 0;display:flex;flex-direction:column;align-items:center;gap:2px}
+.match .pos a:hover{border-color:var(--blue)}
+.match .pos .n{font-size:11px;color:var(--mut)}
+.match .pos .c{font-weight:800;color:var(--blue)}
+.badge{width:37px;height:37px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+.note{font-size:12px;color:var(--mut);margin-top:8px}
+
+/* ---------- SEO ---------- */
+.seo{margin-top:36px}
+.seo h2{font-size:20px;margin:26px 0 10px}
+.seo h2:first-child{margin-top:0}
+.seo p{color:var(--mut2);margin-bottom:12px}
+.seo a{color:var(--blue)}
+.seo a:hover{text-decoration:underline}
+.seo ul,.seo ol{padding-left:24px;margin:0 0 12px}
+.seo li{color:var(--mut2);margin:4px 0}
+.seo a.btn{color:#fff}
+.seo a.btn:hover{text-decoration:none}
+.seo table{width:100%;border-collapse:collapse;margin:14px 0}
+.seo td{padding:9px 12px;border-bottom:1px solid var(--line);color:var(--mut2);font-size:14px}
+.seo td:first-child{color:#fff;font-weight:600;width:36%}
+.pros{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+.pros div{background:var(--card);border-radius:10px;padding:16px}
+.pros h3{font-size:14px;margin-bottom:8px}
+.pros ul{list-style:none}
+.pros li{color:var(--mut2);font-size:14px;padding:4px 0 4px 22px;position:relative}
+.pros .si li::before{content:"✓";position:absolute;left:0;color:#22c55e;font-weight:700}
+.pros .no li::before{content:"✕";position:absolute;left:0;color:#ef4444;font-weight:700}
+.seo details{background:var(--card);border-radius:10px;margin-bottom:8px;padding:0}
+.seo summary{cursor:pointer;font-weight:600;padding:13px 16px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.seo summary::after{content:"+";color:var(--blue);font-size:18px;font-weight:400}
+.seo details[open] summary::after{content:"–"}
+.seo details p{padding:0 16px 13px}
+.cta-box{background:linear-gradient(120deg,#1b2a3d,#16202e);border:1px solid rgba(0,170,235,.35);border-radius:12px;padding:20px;margin:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.cta-box .t{font-weight:800;font-size:17px}
+.cta-box .s{color:var(--mut2);font-size:13.5px}
+
+/* ---------- footer ---------- */
+.ft{background:var(--panel);border-top:1px solid var(--line);margin-top:44px;padding:36px 0 26px}
+.ft-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:26px}
+.ft-cols h4{font-size:13px;text-transform:uppercase;letter-spacing:.8px;color:var(--mut);margin-bottom:12px}
+.ft-cols a{display:block;color:var(--mut2);font-size:14px;padding:4px 0}
+.ft-cols a:hover{color:#fff}
+.pays{display:flex;gap:8px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--line)}
+.pays span{background:var(--card);border-radius:6px;padding:6px 13px;font-size:12px;font-weight:700;color:var(--mut2)}
+.comp{display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line);padding-top:18px}
+.age{flex:none;width:40px;height:40px;border-radius:50%;border:2px solid var(--red);color:var(--red);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+.comp p{color:var(--mut);font-size:12.5px;line-height:1.6}
+
+/* ---------- adaptive ---------- */
+@media(max-width:1100px){
+  .hnav{order:3;flex-basis:100%;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+  .hnav::-webkit-scrollbar{display:none}
+}
+@media(max-width:920px){
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .ft-cols{grid-template-columns:repeat(2,1fr)}
+  .intro h1{font-size:22px}
+}
+@media(max-width:560px){
+  .logo img{height:30px}
+  .btn{padding:0 13px;font-size:12.5px}
+  .cats{gap:10px}
+  .cat .text{font-size:15px;left:10px;bottom:8px}
+  .pros{grid-template-columns:1fr}
+  .ft-cols{grid-template-columns:1fr 1fr;gap:16px}
+  .w-slot a{width:112px}.w-live a{width:130px}.w-show a{width:260px}.w-sport a{width:160px}
+  .match{flex-basis:280px}
+}
+</style>
+<style>
+.subTop{background:linear-gradient(120deg,#1b2a3d,#16202e);border-bottom:1px solid var(--line)}
+.subTop .container{padding-top:16px;padding-bottom:20px}
+.crumbs{font-size:12px;color:var(--mut);margin-bottom:10px}.crumbs a{color:var(--blue)}.crumbs b{color:#fff}
+.subTop h1{font-size:28px;line-height:1.22;max-width:840px}
+.clusterNav{background:var(--panel);border-bottom:1px solid var(--line)}
+.clusterNav .container{display:flex;gap:4px 6px;flex-wrap:wrap;padding:10px 16px;overflow-x:auto;scrollbar-width:none}
+.clusterNav .container::-webkit-scrollbar{display:none}
+.clusterNav a{flex:none;padding:7px 12px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--mut2);white-space:nowrap}
+.clusterNav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.clusterNav a.on{color:#fff;background:var(--blue)}
+.seo .tbl{overflow-x:auto;margin:14px 0}
+.seo ul,.seo ol{padding-left:24px;margin:0 0 13px}
+.seo li{margin:4px 0;color:var(--mut2)}
+.seo h3{font-size:16px;margin:18px 0 8px}
+.clusterFoot{display:flex;gap:8px 16px;flex-wrap:wrap;padding:20px 0 4px;border-top:1px solid var(--line);margin-top:26px}
+.clusterFoot a{color:var(--blue);font-weight:600;font-size:13.5px}
+.gnav{margin:34px 0 8px}
+.gnav h2{font-size:20px;margin-bottom:14px}
+.gnav-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gnav-grid a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:5px;transition:transform .15s,border-color .15s}
+.gnav-grid a:hover{transform:translateY(-3px);border-color:var(--blue);text-decoration:none}
+.gnav-grid .t{font-weight:800;font-size:15px;color:#fff;display:flex;align-items:center;justify-content:space-between}
+.gnav-grid .t::after{content:"→";color:var(--blue);font-weight:400}
+.gnav-grid .d{font-size:12.5px;color:var(--mut);line-height:1.45}
+@media(max-width:920px){.gnav-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.gnav-grid{grid-template-columns:1fr}}
+.subMain{margin-top:26px}
+.subMain .seo{margin-top:0;max-width:880px}
+/* ---- тематические блоки внутриков ---- */
+.ximg{display:block;width:100%;max-width:620px;height:auto;border-radius:14px;margin:22px auto;border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.35)}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.btnrow a{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:9px 18px;font-size:13.5px;font-weight:700;color:#fff;transition:border-color .15s}
+.btnrow a:hover{border-color:var(--blue);text-decoration:none}
+.btnrow a .st{color:#ffc93c;font-size:12px}
+.btnrow a.hot{background:var(--blue);border-color:var(--blue)}
+.ctamini{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:linear-gradient(120deg,#1b2a3d,#16202e);border:1px solid rgba(0,170,235,.3);border-radius:12px;padding:14px 18px;margin:20px 0}
+.ctamini .tt{font-weight:700;font-size:14.5px}.ctamini .tt b{color:var(--blue)}
+.ctamini a{flex:none;background:var(--red);color:#fff;border-radius:8px;padding:9px 18px;font-weight:700;font-size:13.5px}
+.ctamini a:hover{background:var(--red-d);text-decoration:none}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.sgrid a{border-radius:10px;overflow:hidden;transition:transform .15s;position:relative}
+.sgrid a:hover{transform:translateY(-3px)}
+.sgrid img{width:100%;aspect-ratio:210/264;object-fit:cover;height:auto}
+.bcards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
+.bcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 18px;display:flex;flex-direction:column;gap:6px}
+.bcard .k{font-size:11.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);font-weight:800}
+.bcard .v{font-size:26px;font-weight:800;color:#fff;line-height:1.1}
+.bcard .v small{font-size:14px;color:var(--blue);font-weight:700;display:block;margin-top:3px}
+.bcard .d{font-size:12.5px;color:var(--mut2);flex:1}
+.bcard a{align-self:flex-start;background:var(--blue);color:#fff;border-radius:8px;padding:9px 16px;font-weight:700;font-size:13px;margin-top:8px}
+.bcard a:hover{background:var(--blue-d);text-decoration:none}
+.ratebox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin:18px 0}
+.ratebox .big{font-size:44px;font-weight:800;color:#fff;line-height:1}
+.ratebox .big small{font-size:16px;color:var(--mut)}
+.ratebox .bars{flex:1;min-width:240px;display:flex;flex-direction:column;gap:8px}
+.rbar{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--mut2)}
+.rbar .lbl{width:110px;flex:none}.rbar .tr{flex:1;height:7px;border-radius:4px;background:rgba(255,255,255,.09);overflow:hidden}
+.rbar .fl{height:100%;border-radius:4px;background:var(--blue)}
+.rbar .num{width:26px;text-align:right;font-weight:700;color:#fff}
+.rvws{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.rvw{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px}
+.rvw-h{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
+.rvw-n{font-weight:700;font-size:13.5px}.rvw-s{color:#ffc93c;font-size:12.5px;letter-spacing:1.5px;white-space:nowrap}
+.rvw-m{font-size:11.5px;color:var(--mut);margin-bottom:7px}
+.rvw-t{font-size:13.5px;color:var(--mut2);line-height:1.55;margin:0}
+.kvbox{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.kv{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.kv .n{font-size:20px;font-weight:800;color:var(--blue)}
+.kv .l{font-size:11.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.loginbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;max-width:420px;margin:18px 0}
+.loginbox .fld{margin-bottom:12px}
+.loginbox label{display:block;font-size:12px;color:var(--mut);margin-bottom:5px;font-weight:700}
+.loginbox input{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:11px 12px;color:#fff;font-size:14px;pointer-events:none}
+.loginbox .sub{display:block;text-align:center;background:var(--blue);color:#fff;border-radius:8px;padding:12px;font-weight:700;font-size:14.5px;margin-top:14px}
+.loginbox .sub:hover{background:var(--blue-d);text-decoration:none}
+.loginbox .alt{text-align:center;font-size:12.5px;color:var(--mut);margin-top:10px}
+.loginbox .alt a{color:var(--blue)}
+.appbtns{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.appbtns a{display:inline-flex;align-items:center;gap:11px;background:#000;border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:10px 18px;min-width:200px}
+.appbtns a:hover{border-color:var(--blue);text-decoration:none}
+.appbtns .txt small{display:block;font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
+.appbtns .txt b{font-size:15.5px;color:#fff}
+.stores{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.store{flex:1;min-width:200px;background:var(--card);border:1px dashed rgba(255,255,255,.2);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:10px;color:var(--mut);font-size:13px}
+.store .x{color:#ef4444;font-weight:800}
+@media(max-width:880px){.sgrid{grid-template-columns:repeat(3,1fr)}.bcards{grid-template-columns:1fr}.kvbox{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.rvws{grid-template-columns:1fr}.sgrid{grid-template-columns:repeat(2,1fr)}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mystake-casino-it.com/"}, {"@type": "ListItem", "position": 2, "name": "Dino MyStake: guida completa al gioco crash, strategie e bonus", "item": "https://mystake-casino-it.com/dino/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Dino è affidabile?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. È un gioco originale di UpGaming ospitato su una piattaforma con licenza di Curaçao, con risultati visibili in tempo reale da tutti i giocatori connessi."}}, {"@type": "Question", "name": "Dove si trova il gioco Dino?", "acceptedAnswer": {"@type": "Answer", "text": "Nella sezione Minigiochi, dal menu principale dopo l&#x27;accesso; in alternativa lo cerchi per nome nella barra di ricerca del catalogo."}}, {"@type": "Question", "name": "Qual è l&#x27;RTP di Dino?", "acceptedAnswer": {"@type": "Answer", "text": "Dichiarato intorno al 96%, con il valore esatto mostrato direttamente nella finestra del gioco."}}, {"@type": "Question", "name": "Si può giocare gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Sì, c&#x27;è la modalità demo con saldo virtuale. Le vincite demo non sono prelevabili e non attivano bonus."}}, {"@type": "Question", "name": "Come si gioca a Dino per soldi veri?", "acceptedAnswer": {"@type": "Answer", "text": "Dopo il deposito, apri il gioco, imposti l&#x27;importo della puntata e premi Cash Out prima che cada il meteorite: la vincita è la puntata moltiplicata per il valore raggiunto al momento dell&#x27;incasso."}}, {"@type": "Question", "name": "Esiste un Dino NFT?", "acceptedAnswer": {"@type": "Answer", "text": "No. È un gioco crash, non un progetto NFT. Diffida dei siti che promettono token o collezionabili legati al gioco."}}, {"@type": "Question", "name": "Come funziona il meteorite?", "acceptedAnswer": {"@type": "Answer", "text": "Cade in un momento casuale deciso dall&#x27;algoritmo del gioco e chiude il round: chi non ha incassato perde la puntata."}}, {"@type": "Question", "name": "Qual è la strategia migliore?", "acceptedAnswer": {"@type": "Answer", "text": "Non ne esiste una vincente in assoluto. L&#x27;approccio più prudente resta il cash out basso (1,20x–1,50x) con puntate contenute, tenendo sempre a mente che parliamo di puro azzardo e che ogni round è indipendente dai precedenti."}}]}</script>
+</head>
+<body>
+<header class="hd">
+  <div class="container">
+    <a class="logo" href="/"><img src="/assets/logo.svg" alt="Mystake" width="107" height="36"></a>
+    <nav class="hnav">
+      <a href="/referral-link">Sports</a>
+      <a href="/referral-link">Slot</a>
+      <a href="/referral-link">Casinò Live</a>
+      <a href="/referral-link">MiniGiochi<span class="tag">Caldo</span></a>
+      <a href="/referral-link">Promozioni<span class="tag">Caldo</span></a>
+    </nav>
+    <div class="auth">
+      <a class="btn btn-red" href="/referral-link">Registro</a>
+      <a class="btn btn-blue" href="/referral-link">Accedi</a>
+    </div>
+    <span class="lang"><svg width="20" height="14" viewBox="0 0 3 2"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg>IT</span>
+  </div>
+</header>
+<section class="subTop"><div class="container">
+  <div class="crumbs"><a href="/">Home</a> / <b>Dino</b></div>
+  <h1>Dino MyStake: guida completa al gioco crash, strategie e bonus</h1>
+</div></section>
+<div class="clusterNav"><div class="container"><a href="/">Home</a><a href="/bonus/">Bonus</a><a href="/casino/">Casinò</a><a href="/scommesse/">Scommesse</a><a href="/chicken-pollo/">Gioco del pollo</a><a href="/dino/" class="on">Dino</a><a href="/accesso/">Accesso</a><a href="/app/">App</a><a href="/recensioni/">Recensioni</a></div></div>
+<main class="container subMain">
+  <article class="seo">
+<p>Dino MyStake è tra i minigiochi più cliccati da chi cerca un&#x27;alternativa rapida alle slot. Il meccanismo? Un dinosauro corre, il moltiplicatore sale e tu decidi quando incassare prima che arrivi il meteorite. Qui dentro trovi quello che conta davvero: dove si trova il gioco, come funziona, quanto puoi puntare, quali bonus si applicano e come depositare in euro o in Bitcoin.</p>
+
+<img class="ximg" src="/assets/xtra-dino.jpg" alt="Dino — il crash game Mystake" loading="lazy">
+<h2>Cos&#x27;è il gioco Dino su MyStake?</h2>
+<p>Dino è un gioco crash firmato UpGaming, che vive nella sezione Minigiochi della piattaforma. L&#x27;ispirazione salta all&#x27;occhio: il T-Rex di Chrome, quello che spunta quando salta la connessione, qui diventa un gioco a soldi veri. La meccanica è semplice ma ti tiene sul filo. Il dinosauro parte, il moltiplicatore cresce da 1,01x in su, e a un certo punto — non sai mai quando — cade un meteorite che chiude il round. Chi ha incassato prima, porta a casa; chi è rimasto dentro, saluta la puntata.</p>
+<p>I numeri che contano (le condizioni possono cambiare, controlla sempre i valori aggiornati nella finestra di gioco):</p>
+<ul><li><b>Puntata</b>: da 0,20 € a 1.000 € per round</li><li><b>Moltiplicatore massimo</b>: fino a 10.000x</li><li><b>RTP</b>: dichiarato intorno al 96–97%, con il valore esatto nella finestra del gioco</li><li><b>Volatilità</b>: contenuta — i crash a moltiplicatori bassissimi capitano di rado, ma i voli oltre 10x non arrivano a ogni round</li></ul>
+<p>C&#x27;è un dettaglio che fa la differenza: è multiplayer, in tempo reale. Tutti guardano lo stesso dinosauro correre e nel feed scorrono le puntate e gli incassi degli altri. Ogni round diventa una piccola gara collettiva.</p>
+<div class="cta-box"><div><div class="t">Bonus di benvenuto fino a 1.000 €</div><div class="s">170% sul primo deposito in crypto · 18+ · si applicano requisiti di puntata</div></div><a class="btn btn-blue" style="height:46px;padding:0 28px;font-size:15px" href="/referral-link">Vai a Mystake</a></div><h2>Dove trovare Dino e come iniziare</h2>
+<p>Fatto l&#x27;accesso, il gioco si raggiunge dal menu principale, sezione <b>Minigiochi</b>: da lì scorri il catalogo oppure digiti &quot;Dino&quot; nella barra di ricerca. La disponibilità del titolo, e l&#x27;accesso stesso alla piattaforma, può dipendere dal Paese e dall&#x27;età minima consentita (18+). Verifica che il gioco sia raggiungibile dalla tua zona.</p>
+
+<div class="kvbox"><div class="kv"><div class="n">crash</div><div class="l">meccanica</div></div><div class="kv"><div class="n">provably fair</div><div class="l">risultati verificabili</div></div><div class="kv"><div class="n">0,10 €</div><div class="l">puntata minima</div></div><div class="kv"><div class="n">auto cash out</div><div class="l">disponibile</div></div></div>
+<h2>Come giocare e puntare su Dino MyStake passo dopo passo</h2>
+<p>L&#x27;obiettivo è uno: incassare prima del meteorite. Ecco la procedura per intero:</p>
+<p>1. <b>Registrati o accedi</b>: bastano email, username e una password di almeno 8 caratteri con una maiuscola e un carattere alfanumerico. Prima di chiudere, spunta la casella &quot;Accetto Termini &amp; Condizioni e Privacy Policy&quot; e conferma.</p>
+<p>2. <b>Deposita</b> (minimo 10 €) e apri la sezione Minigiochi.</p>
+<p>3. <b>Imposta l&#x27;importo</b> della puntata: è l&#x27;unico parametro che puoi toccare, la probabilità di vincita non si sposta di un millimetro.</p>
+<p>4. <b>Conferma la puntata</b> prima che parta il round.</p>
+<p>5. <b>Guarda il dinosauro correre</b> e il moltiplicatore salire in diretta.</p>
+<p>6. <b>Premi Cash Out</b> quando ti senti soddisfatto — o quando i nervi cedono.</p>
+<p>Il calcolo della vincita è immediato: <b>puntata × moltiplicatore al momento dell&#x27;incasso</b>. Punti 10 € e incassi a 3,50x? Ti tornano 35 €. Se il meteorite cade prima del tuo cash out, la puntata è andata. Tutto qui. Niente linee di pagamento, niente combinazioni, solo tempismo e gestione del rischio.</p>
+<h2>Funzioni e caratteristiche dell&#x27;interfaccia</h2>
+<p>L&#x27;interfaccia è essenziale, ma dà a chi gioca tutto il necessario per tenere sotto controllo le sessioni:</p>
+<ul><li><b>Doppia puntata</b>: fino a 2 puntate simultanee sullo stesso round, ognuna con importo e strategia di uscita diversi. Comoda per le tattiche di copertura che vediamo più avanti.</li><li><b>Auto Cash Out</b>: imposti un moltiplicatore target (diciamo 2,00x) e il sistema incassa da solo appena lo tocca. Toglie di mezzo l&#x27;emotività, che in un gioco crash è il vero nemico.</li><li><b>Puntata automatica</b>: il gioco ripete la stessa puntata round dopo round. Utile se segui un metodo con parametri fissi.</li><li><b>Cronologia delle puntate</b>: rivedi i tuoi round passati e i moltiplicatori a cui è caduto il meteorite nelle partite precedenti.</li><li><b>Moltiplicatore live e chat</b>: il valore cresce sullo schermo in tempo reale e la chat mostra le mosse degli altri.</li></ul>
+
+<div class="btnrow"><a class="hot" href="/referral-link">Gioca a Chicken <span class="st">★ 4.5</span></a><a href="/referral-link">Gioca a Dino <span class="st">★ 4.3</span></a><a href="/referral-link">Plinko <span class="st">★ 4.2</span></a><a href="/referral-link">Tutti i Mini Games</a></div>
+<h2>Provare Dino gratis in modalità demo</h2>
+<p>Prima di metterci soldi veri, conviene farsi le ossa con la demo. La piattaforma ti fa aprire il gioco in modalità gratuita con saldo virtuale, direttamente dal browser e senza scaricare nulla. Funziona esattamente come la versione reale: stesso moltiplicatore, stesso meteorite, stesso auto cash out.</p>
+<p>I vantaggi sono lampanti. Capisci il ritmo, provi le strategie senza bruciare il bankroll e prendi confidenza con l&#x27;interfaccia. Ma i limiti vanno detti chiari: <b>le vincite della demo non si possono prelevare</b> e le puntate virtuali <b>non attivano né sbloccano alcun bonus</b>. È un campo di allenamento, non una scorciatoia.</p>
+<h2>Gestione del rischio e approcci di gioco</h2>
+<p>Premessa doverosa: Dino è azzardo puro e <b>nessun metodo garantisce vincite</b>. I round sono indipendenti tra loro. I risultati passati non influenzano quello successivo né lo prevedono, e nemmeno un cash out basso ti mette al riparo dalle perdite. Detto questo, ecco qualche approccio per gestire il rischio con più testa:</p>
+<p><b>Martingala</b>: parti con una puntata bassa (es. 0,50 €), imposti l&#x27;auto cash out a 2,00x e raddoppi l&#x27;importo dopo ogni perdita, tornando alla base dopo una vincita. Occhio: questo metodo <b>non offre alcun vantaggio matematico</b> e fa impennare il rischio in fretta. Una serie di sfiga abbastanza lunga può prosciugarti il bankroll o mandarti a sbattere contro il tetto dei 1.000 € per round.</p>
+<p><b>Metodo conservativo dell&#x27;1,20x</b>: incassi sempre a 1,20x, accumulando vincite piccole e frequenti. Guadagno lento, varianza contenuta. Però ricorda: il meteorite può cadere anche prima di quel valore, e la perdita resta possibile a ogni round.</p>
+<p><b>Copertura con doppia puntata</b>: sfrutti le 2 puntate simultanee. La prima, più grossa, con auto cash out basso (1,50x) per coprire i costi; la seconda, più piccola, la lasci correre verso moltiplicatori alti. Se il dinosauro vola, il colpo lo fa la seconda; se cade presto, la prima limita i danni.</p>
+
+<div class="ctamini"><div class="tt">Dino: esci prima dell'asteroide, <b>moltiplicatore senza tetto</b></div><a href="/referral-link">Gioca ora »</a></div>
+<h2>Bonus e promozioni per giocare a Dino</h2>
+<p>I minigiochi rientrano a pieno titolo nelle promo dedicate della piattaforma. Le offerte tipiche:</p>
+<ul><li><b>Bonus di benvenuto minigiochi</b>: fino al 170% sul primo deposito, tagliato apposta per titoli di questo tipo.</li><li><b>Giri gratis</b> con deposito: round omaggio per testare il gioco con soldi veri.</li><li><b>Giri gratis senza deposito</b> inserendo il codice promozionale in fase di registrazione.</li><li><b>Cashback in crypto</b>: giocando con Bitcoin o altre criptovalute recuperi una percentuale delle perdite.</li></ul>
+<p>Ogni offerta ha il suo rollover da completare prima di poter prelevare le vincite generate dal bonus. Promozioni e importi cambiano spesso: leggi sempre i termini e condizioni della singola offerta prima di attivarla.</p>
+<h2>Depositi, prelievi e pagamenti in Bitcoin</h2>
+<p>Il deposito minimo è di 10 € e le valute accettate includono EUR, USD, GBP e BRL. I metodi a disposizione:</p>
+<div class="tbl"><table><thead><tr><th>Metodo</th><th>Deposito min.</th><th>Note</th></tr></thead><tbody><tr><td>Visa / MasterCard</td><td>10 €</td><td>Accredito immediato</td></tr><tr><td>Skrill / Neteller</td><td>10 €</td><td>E-wallet, veloci</td></tr><tr><td>Bonifico SEPA / Bank Wire</td><td>10 €</td><td>Prelievo fino a 3 giorni</td></tr><tr><td>Bitcoin / USDT / Ethereum</td><td>10 €</td><td>Ideali per il cashback crypto</td></tr></tbody></table></div>
+<p>Il prelievo passa dallo stesso metodo usato per depositare. I limiti indicati sono di circa <b>7.500 € a settimana e 15.000 € al mese</b>, calcolati su base mobile di 7 e 30 giorni a partire dalla transazione completata con successo — non dalla richiesta. Questi valori possono cambiare in base alle regole aggiornate dell&#x27;operatore. Chi gioca in crypto la rapidità la sente eccome: le transazioni in Bitcoin saltano i tempi bancari e si sposano bene col ritmo veloce del gioco.</p>
+<h2>Affidabilità, app mobile e opinioni dei giocatori</h2>
+<p>La piattaforma è gestita da GTW B.V., società registrata a Curaçao (numero 165433) con licenza della Curaçao Gaming Authority n. OGL/2024/250/0115. Un operatore internazionale, quindi, non AAMS/ADM, con pagamenti sicuri, supporto multivaluta e assistenza attiva 24/7.</p>
+<p>Il supporto lo raggiungi in fretta: su qualsiasi pagina del sito c&#x27;è il pulsante <b>&quot;Contact&quot;</b> nell&#x27;angolo dello schermo, da cui scrivi una email o apri la <b>Live Chat</b> (la trovi anche scorrendo la pagina, subito sotto il pulsante Contact). In chat un operatore ufficiale risponde in tempo reale. Per proposte commerciali o richieste di partnership meglio usare l&#x27;indirizzo email dedicato indicato sotto il pulsante Contact, oppure la mail generale support@mystake.email.</p>
+<p>App da scaricare? Nessuna. Dino gira direttamente dal browser, sia su PC che su smartphone Android e iOS, con interfaccia adattata al touch. Il gioco è identico in ogni versione, auto cash out compreso.</p>
+<p>Le recensioni raccontano un&#x27;esperienza nel complesso positiva: molti apprezzano la semplicità e la trasparenza del feed multiplayer, dove vedi in diretta gli incassi degli altri — comprese le vincite grosse a moltiplicatori sopra il 10x. Le critiche più ricorrenti? I tempi dei prelievi bancari (fino a 3 giorni), che aggiri semplicemente andando di criptovalute.</p>
+<h2>Domande frequenti su Dino MyStake</h2>
+<details><summary>Dino è affidabile?</summary><p>Sì. È un gioco originale di UpGaming ospitato su una piattaforma con licenza di Curaçao, con risultati visibili in tempo reale da tutti i giocatori connessi.</p></details>
+<details><summary>Dove si trova il gioco Dino?</summary><p>Nella sezione Minigiochi, dal menu principale dopo l&#x27;accesso; in alternativa lo cerchi per nome nella barra di ricerca del catalogo.</p></details>
+<details><summary>Qual è l&#x27;RTP di Dino?</summary><p>Dichiarato intorno al 96%, con il valore esatto mostrato direttamente nella finestra del gioco.</p></details>
+<details><summary>Si può giocare gratis?</summary><p>Sì, c&#x27;è la modalità demo con saldo virtuale. Le vincite demo non sono prelevabili e non attivano bonus.</p></details>
+<details><summary>Come si gioca a Dino per soldi veri?</summary><p>Dopo il deposito, apri il gioco, imposti l&#x27;importo della puntata e premi Cash Out prima che cada il meteorite: la vincita è la puntata moltiplicata per il valore raggiunto al momento dell&#x27;incasso.</p></details>
+<details><summary>Esiste un Dino NFT?</summary><p>No. È un gioco crash, non un progetto NFT. Diffida dei siti che promettono token o collezionabili legati al gioco.</p></details>
+<details><summary>Come funziona il meteorite?</summary><p>Cade in un momento casuale deciso dall&#x27;algoritmo del gioco e chiude il round: chi non ha incassato perde la puntata.</p></details>
+<details><summary>Qual è la strategia migliore?</summary><p>Non ne esiste una vincente in assoluto. L&#x27;approccio più prudente resta il cash out basso (1,20x–1,50x) con puntate contenute, tenendo sempre a mente che parliamo di puro azzardo e che ogni round è indipendente dai precedenti.</p></details>
+  </article>
+  <div class="clusterFoot"><a href="/">Home</a><a href="/bonus/">Bonus</a><a href="/casino/">Casinò</a><a href="/scommesse/">Scommesse</a><a href="/chicken-pollo/">Gioco del pollo</a><a href="/dino/">Dino</a><a href="/accesso/">Accesso</a><a href="/app/">App</a><a href="/recensioni/">Recensioni</a></div>
+</main>
+<footer class="ft">
+  <div class="container">
+    <div class="ft-cols">
+      <div><h4>Casinò</h4>
+        <a href="/referral-link">Slot</a><a href="/referral-link">Casinò Live</a><a href="/referral-link">MiniGiochi</a><a href="/referral-link">Originals</a><a href="/referral-link">Tornei</a>
+      </div>
+      <div><h4>Scommesse</h4>
+        <a href="/referral-link">Sports</a><a href="/referral-link">Sport in diretta</a><a href="/referral-link">Virtuali</a><a href="/referral-link">E-sports</a><a href="/referral-link">Corsa</a>
+      </div>
+      <div><h4>Guida Mystake</h4>
+        <a href="/bonus/">Bonus e codice promo</a><a href="/chicken-pollo/">Gioco del pollo</a><a href="/dino/">Dino</a><a href="/recensioni/">Recensioni</a><a href="/accesso/">Accesso</a><a href="/app/">App</a>
+      </div>
+      <div><h4>Assistenza</h4>
+        <a href="/referral-link">Assistenza dal Vivo</a><a href="/referral-link">Affiliato</a><a href="/referral-link">Termini e condizioni</a><a href="/referral-link">Gioco responsabile</a>
+      </div>
+    </div>
+    <div class="pays">
+      <span>VISA</span><span>Mastercard</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Litecoin</span><span>MiFinity</span>
+    </div>
+    <div class="comp">
+      <div class="age">18+</div>
+      <p>Il gioco può causare dipendenza patologica. Gioca responsabilmente.<br>
+      Mystake è un casinò internazionale (non AAMS) operato da Santeda International B.V., Curaçao. Le quote mostrate sono indicative.<br>
+      © 2026 · Sito informativo indipendente su Mystake Casino.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
